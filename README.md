@@ -21,7 +21,6 @@ This is a comprehensive API automation framework built with Java, TestNG, and Re
 - ✅ **Comprehensive Reporting**: ExtentReports + HTML reports
 - ✅ **CI/CD Integration**: GitHub Actions pipeline
 - ✅ **Code Coverage**: JaCoCo coverage reporting
-- ✅ **Security Scanning**: Trivy vulnerability scanning
 
 ### **Test Coverage**
 - **13 Test Cases** across all CRUD operations
@@ -231,27 +230,36 @@ test.retry.count=2
 
 ### **GitHub Actions**
 - **Triggers**: Push, Pull Request, Daily Schedule
-- **Stages**: Test → Security → Notify
-- **Artifacts**: Test reports (30-day retention)
-- **Notifications**: Slack integration
+- **Stages**: Test → Coverage → Report
+- **Artifacts**: ExtentReports (30-day retention)
+- **Notifications**: PR comments with download links
 
-### **Pipeline Features**
-- ✅ **Parallel Execution**: Multi-core processing
-- ✅ **Dependency Caching**: Gradle cache optimization
-- ✅ **Security Scanning**: Trivy vulnerability scanning
-- ✅ **Coverage Reporting**: JaCoCo + Codecov
-- ✅ **Slack Notifications**: Success/failure alerts
+### **Pipeline Stages**
+```yaml
+# Test Stage
+- Run API Tests
+- Generate ExtentReports
+- Upload Artifacts
+
+# Coverage Stage  
+- Generate JaCoCo Reports
+- Upload to Codecov
+
+# Report Stage
+- PR Comments
+- Download Links
+```
+
+### **Artifacts & Reports**
+- **ExtentReports**: Interactive HTML reports
+- **Coverage Reports**: JaCoCo HTML + XML
+- **Codecov Integration**: Cloud-based coverage tracking
+- **PR Comments**: Test result summaries with download links
 
 ### **Setup Instructions**
-1. **Configure GitHub Secrets**:
-   ```yaml
-   SLACK_WEBHOOK_URL: "your-slack-webhook-url"
-   CODECOV_TOKEN: "your-codecov-token"
-   ```
+1. **Enable Codecov**: Connect repository to Codecov
 
-2. **Enable Codecov**: Connect repository to Codecov
-
-3. **Configure Slack**: Create webhook URL
+2. **Configure GitHub Actions**: No additional setup required
 
 ## 📊 Test Data Management
 
