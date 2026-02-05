@@ -1,0 +1,14 @@
+Test Suite,Test Method,Test Data Type,User ID,Name,Email,Expected Status,Description
+Create User Tests,testCreateUser,Positive,,John Doe,john.doe@example.com,201,Create new user with valid data
+Create User Tests,testCreateUserWithEmptyData,Negative,,,"",400,Create user with empty data
+Create User Tests,testCreateUserWithInvalidEmail,Negative,,Test User,invalid-email,400,Create user with invalid email
+Get Users Tests,testGetUsers,Positive,,,,200,Get all users list
+Get Users Tests,testGetNonExistentUser,Negative,999,,404,Get non-existent user by ID
+Get User By ID Tests,testGetResourceById,Positive,1,,,200,Get valid resource by ID
+Get User By ID Tests,testGetNonExistentResource,Negative,999,,,404,Get non-existent resource by ID
+Update User Tests,testUpdateUser,Positive,2,John Updated,john.updated@example.com,200,Update existing user
+Update User Tests,testUpdateNonExistentUser,Negative,999,John Updated,john.updated@example.com,404,Update non-existent user
+Update User Tests,testUpdateUserWithInvalidData,Negative,2,"",invalid-email,400,Update user with invalid data
+Delete User Tests,testDeleteUser,Positive,2,,,204,Delete existing user
+Delete User Tests,testDeleteNonExistentUser,Negative,999,,,404,Delete non-existent user
+Delete User Tests,testVerifyUserDeleted,Positive,2,,,204,Verify user deletion

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ReqRes API Test Suite">
+    <test name="Create User Tests">
+        <classes>
+            <class name="tests.users.PostUsersTest"/>
+        </classes>
+    </test>
+    
+    <test name="Get Users Tests">
+        <classes>
+            <class name="tests.users.GetUsersTest"/>
+        </classes>
+    </test>
+    
+    <test name="Get User By ID Tests">
+        <classes>
+            <class name="tests.resources.GetResourceTest"/>
+        </classes>
+    </test>
+    
+    <test name="Update User Tests">
+        <classes>
+            <class name="tests.users.PutUsersTest"/>
+        </classes>
+    </test>
+    
+    <test name="Delete User Tests">
+        <classes>
+            <class name="tests.users.DeleteUsersTest"/>
+        </classes>
+    </test>
+</suite>

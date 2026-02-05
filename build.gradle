@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'jacoco'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'com.reqres'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // TestNG
+    testImplementation 'org.testng:testng:7.8.0'
+    
+    // Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+    
+    // Jackson for JSON processing
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    
+    // ExtentReports for reporting
+    testImplementation 'com.aventstack:extentreports:5.1.1'
+    
+    // Hamcrest for assertions
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    
+    // SLF4J for logging
+    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+    
+    // Apache POI for Excel
+    testImplementation 'org.apache.poi:poi:5.2.4'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.4'
+    
+    // Apache Commons CSV for CSV reading
+    testImplementation 'org.apache.commons:commons-csv:1.10.0'
+    
+    // Lombok for cleaner code
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+test {
+    useTestNG()
+}
