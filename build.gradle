@@ -54,5 +54,28 @@ dependencies {
 }
 
 test {
-    useTestNG()
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+        useDefaultListeners = true
+        outputDirectory = file("$buildDir/reports/tests")
+    }
+    
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+    
+    systemProperty 'baseURI', System.getProperty('baseURI', 'https://reqres.in/api')
+    
+    // Retry failed tests
+    retry(2)
+    
+    // Parallel execution
+    maxParallelForks = Runtime.runtime.availableProcessors()
+    
+    // Generate JUnit XML reports for GitHub Actions
+    reports {
+        junitXml.required = true
+        html.required = true
+    }
 }

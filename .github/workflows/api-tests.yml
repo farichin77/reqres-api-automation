@@ -65,8 +65,8 @@ jobs:
       if: always()
       with:
         name: API Test Results
-        path: build/reports/tests/test/index.html
-        reporter: html
+        path: build/test-results/test/*.xml
+        reporter: java-junit
         
     - name: Comment PR with Test Results
       if: github.event_name == 'pull_request'
