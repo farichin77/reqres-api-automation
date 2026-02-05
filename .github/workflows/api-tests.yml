@@ -52,16 +52,6 @@ jobs:
           build/reports/tests/
         retention-days: 30
         
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: test-results
-        path: |
-          build/reports/tests/
-          build/reports/jacoco/
-        retention-days: 30
-        
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       if: always()
@@ -69,14 +59,6 @@ jobs:
         file: ./build/reports/jacoco/test/jacocoTestReport.xml
         flags: unittests
         name: codecov-umbrella
-        
-    - name: Publish Test Results
-      uses: dorny/test-reporter@v1
-      if: always()
-      with:
-        name: API Test Results
-        path: build/test-results/test/*.xml
-        reporter: java-junit
         
     - name: Comment PR with Test Results
       if: github.event_name == 'pull_request'

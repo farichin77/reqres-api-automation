@@ -71,12 +71,6 @@ test {
     // Parallel execution
     maxParallelForks = Runtime.runtime.availableProcessors()
     
-    // Generate JUnit XML reports for GitHub Actions
-    reports {
-        junitXml.required = true
-        html.required = true
-    }
-    
     retry {
         maxRetries = 2
         maxFailures = 5
