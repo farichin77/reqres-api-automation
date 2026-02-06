@@ -40,13 +40,11 @@ public class BaseTest {
     @BeforeMethod
     public void startTest(Method method) {
         RestAssured.requestSpecification = null;
-        
-        // Get API key from system properties (GitHub Actions) or config file or default
+
         String apiKey = System.getProperty("apiKey", 
                           ConfigReader.getProperty("apiKey", 
                           "reqres_abdc43c872674a8ebf125ac633b65ce5"));
-        
-        // Set fresh request specification for each test
+
         RestAssured.requestSpecification = given()
                 .header("x-api-key", apiKey)
                 .contentType("application/json")
