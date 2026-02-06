@@ -6,7 +6,7 @@
             <class name="tests.users.PostUsersTest"/>
         </classes>
     </test>
-    
+        
     <test name="Get Users Tests">
         <classes>
             <class name="tests.users.GetUsersTest"/>
@@ -15,7 +15,7 @@
     
     <test name="Get User By ID Tests">
         <classes>
-            <class name="tests.resources.GetResourceTest"/>
+            <class name="tests.users.GetUserByIdTest"/>
         </classes>
     </test>
     

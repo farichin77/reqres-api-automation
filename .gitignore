@@ -40,3 +40,33 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Configuration Files ###
+# Sensitive configuration files
+*.properties
+config/
+src/test/resources/config.properties
+src/test/resources/application.properties
+src/test/resources/credentials.properties
+
+# Environment specific files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs and reports
+logs/
+*.log
+test-output/
+build/reports/
+
+# Test data with sensitive information
+sensitive_test_data.csv
+*_sensitive.csv
+
+# API keys and secrets
+api-keys.txt
+secrets.txt
+credentials.txt

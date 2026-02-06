@@ -1,5 +1,19 @@
 {
   "name" : "Test User",
-  "email" : "test.user@example.com",
-  "id" : 11
+  "email" : "invalid-email",
+  "id" : "710",
+  "createdAt" : "2026-02-06T13:30:15.793Z",
+  "_meta" : {
+    "powered_by" : "ReqRes",
+    "docs_url" : "https://app.reqres.in/documentation",
+    "upgrade_url" : "https://app.reqres.in/upgrade",
+    "example_url" : "https://app.reqres.in/examples/notes-app",
+    "variant" : "v1_a",
+    "message" : "Classic ReqRes still works. Projects add persistence, auth, and logs.",
+    "cta" : {
+      "label" : "See example app",
+      "url" : "https://app.reqres.in/examples/notes-app"
+    },
+    "context" : "legacy_success"
+  }
 }

@@ -24,13 +24,6 @@ public class GetUsersTest extends BaseTest {
             Response response = usersPage.getUsers();
             logResponse(response);
 
-            // Handle connection issues gracefully
-            if (response.getStatusCode() == 403 || response.getStatusCode() == 404) {
-                logInfo("Received " + response.getStatusCode() + " - API might have access restrictions");
-                // Skip assertion for now due to connection issues
-                return;
-            }
-            
             Assert.assertEquals(response.getStatusCode(), testData.expectedStatus);
             
             // Validasi response structure untuk ReqRes
@@ -47,9 +40,7 @@ public class GetUsersTest extends BaseTest {
             logInfo("GET users test passed successfully");
         } catch (Exception e) {
             logInfo("Connection error: " + e.getMessage());
-            logInfo("Skipping GET users test due to connection issues");
-            // Skip test gracefully
-            return;
+            Assert.fail("Test failed due to connection error: " + e.getMessage());
         }
     }
 
@@ -59,26 +50,21 @@ public class GetUsersTest extends BaseTest {
         
         try {
             // Get test data from CSV
-            CsvDataReader.TestData testData = CsvDataReader.getTestData("testGetUsers", "Negative");
+            CsvDataReader.TestData testData = CsvDataReader.getTestData("testGetNonExistentUser", "Negative");
             
             Response response = usersPage.getUserById(testData.userId);
             logResponse(response);
 
-            // Handle connection issues gracefully
-            if (response.getStatusCode() == 403 || response.getStatusCode() == 404) {
-                logInfo("Received " + response.getStatusCode() + " - API might have access restrictions");
-                // Skip assertion for now due to connection issues
-                return;
-            }
-            
             Assert.assertEquals(response.getStatusCode(), testData.expectedStatus);
             
             logInfo("GET non-existent user test passed successfully");
         } catch (Exception e) {
             logInfo("Connection error: " + e.getMessage());
-            logInfo("Skipping GET non-existent user test due to connection issues");
-            // Skip test gracefully
-            return;
+            Assert.fail("Test failed due to connection error: " + e.getMessage());
         }
     }
+
+
+
+
 }

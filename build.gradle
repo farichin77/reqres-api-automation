@@ -1,10 +1,6 @@
 plugins {
     id 'java'
-    id 'application'
-    id 'org.springframework.boot' version '3.2.0'
-    id 'io.spring.dependency-management' version '1.1.4'
     id 'jacoco'
-    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'org.gradle.test-retry' version '1.5.8'
 }
 
@@ -24,6 +20,7 @@ dependencies {
     testImplementation 'org.testng:testng:7.8.0'
     
     // Rest Assured
+    implementation 'io.rest-assured:rest-assured:5.4.0'
     testImplementation 'io.rest-assured:rest-assured:5.4.0'
     testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
     
@@ -68,8 +65,9 @@ test {
     
     systemProperty 'baseURI', System.getProperty('baseURI', 'https://reqres.in/api')
     
-    // Parallel execution
-    maxParallelForks = Runtime.runtime.availableProcessors()
+    
+    // Parallel execution - reduced to avoid rate limiting
+    maxParallelForks = 1
     
     retry {
         maxRetries = 2

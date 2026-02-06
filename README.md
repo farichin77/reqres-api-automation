@@ -23,8 +23,8 @@ This is a comprehensive API automation framework built with Java, TestNG, and Re
 - ✅ **Code Coverage**: JaCoCo coverage reporting
 
 ### **Test Coverage**
-- **13 Test Cases** across all CRUD operations
-- **7 Positive Tests** (happy path scenarios)
+- **11 Test Cases** across all CRUD operations
+- **5 Positive Tests** (happy path scenarios)
 - **6 Negative Tests** (error scenarios)
 - **Multiple Endpoints**: Users, Resources
 - **Status Code Validation**: 200, 201, 204, 400, 404
@@ -61,6 +61,8 @@ reqres-api-automation/
 │       │       ├── ConfigReader.java
 │       │       ├── CsvDataReader.java
 │       │       ├── ExtentManager.java
+│       │       ├── ApiCallContext.java
+│       │       ├── ApiCaptureFilter.java
 │       │       └── JsonUtils.java
 │       └── resources/
 │           ├── config.properties
@@ -125,14 +127,11 @@ baseUrl=https://reqres.in/api
 
 ### **Run Specific Test Categories**
 ```bash
-# Run smoke tests only
-./gradlew runSmokeTests
+# Run a specific test class
+./gradlew test --tests "tests.users.PostUsersTest"
 
-# Run regression tests only
-./gradlew runRegressionTests
-
-# Run API tests only
-./gradlew runAPITests
+# Run a specific test method
+./gradlew test --tests "tests.users.PostUsersTest.testCreateUser"
 ```
 
 ### **Generate Coverage Report**
@@ -143,20 +142,20 @@ baseUrl=https://reqres.in/api
 ### **View Reports**
 - **Test Report**: `build/reports/tests/test/index.html`
 - **Coverage Report**: `build/reports/jacoco/html/index.html`
+- **Extent Report**: `test-output/ExtentReport.html`
 
 ## 📋 Test Cases
 
 ### **Test Coverage Overview**
-- **Total Test Cases**: 13
-- **Positive Tests**: 7
+- **Total Test Cases**: 11
+- **Positive Tests**: 5
 - **Negative Tests**: 6
 - **API Endpoints**: `/users`, `/unknown/{id}`
 
 ### **Test Categories**
 
-#### **1. Create User Tests** (3 cases)
+#### **1. Create User Tests** (2 cases)
 - Create new user with valid data ✅
-- Create user with empty data ❌
 - Create user with invalid email ❌
 
 #### **2. Get Users Tests** (2 cases)
@@ -167,10 +166,9 @@ baseUrl=https://reqres.in/api
 - Get valid resource by ID ✅
 - Get non-existent resource ❌
 
-#### **4. Update User Tests** (3 cases)
+#### **4. Update User Tests** (2 cases)
 - Update existing user ✅
 - Update non-existent user ❌
-- Update user with invalid data ❌
 
 #### **5. Delete User Tests** (3 cases)
 - Delete existing user ✅
@@ -211,7 +209,6 @@ test.retry.count=2
 
 ### **ExtentReports**
 - **HTML Reports**: Interactive and detailed test reports
-- **Screenshots**: Automatic capture on failures
 - **Logs**: Comprehensive test execution logs
 - **Charts**: Test result visualization
 
@@ -319,7 +316,7 @@ Response response = usersPage.createUser(testData.name, testData.email);
 ### **Logs Location**
 - **Test Logs**: `build/logs/test.log`
 - **Gradle Logs**: Console output
-- **ExtentReports**: `build/reports/extent.html`
+- **ExtentReports**: `test-output/ExtentReport.html`
 
 ## 🤝 Contributing
 
@@ -378,8 +375,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📊 Statistics
 
 ### **Project Metrics**
-- **Lines of Code**: ~2000
-- **Test Cases**: 13
+- **Lines of Code**: ~1500
+- **Test Cases**: 11
 - **Code Coverage**: 70%+
 - **Build Time**: ~2 minutes
 - **Test Execution Time**: ~30 seconds

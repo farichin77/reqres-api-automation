@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Thursday, February 05, 2026, 11:08 PM (JST)</span></a>
+<a href="#"><span class="badge badge-primary">Friday, February 06, 2026, 10:30 PM (JST)</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -72,6 +77,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,7 +85,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">users</a><a class="dropdown-item" href="#">resources</a>
+<a class="dropdown-item" href="#">users</a>
 </ul>
 </li>
 </ul>
@@ -92,7 +98,7 @@
           <div class="test-detail">
             <p class="name">testCreateUser</p>
             <p class="text-sm">
-              <span>11:08:01 PM</span> / <span>00:00:03:333</span>
+              <span>10:30:09 PM</span> / <span>00:00:06:040</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -101,9 +107,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">testCreateUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:01 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:04 PM</span>
-<span class='badge badge-default'>00:00:03:333</span>
+<span class='badge badge-success'>02.06.2026 10:30:09 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:15 PM</span>
+<span class='badge badge-default'>00:00:06:040</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -117,35 +123,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:01 PM</td>
+        <td>10:30:09 PM</td>
         <td>
           Testing POST create user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:14 PM</td>
         <td>
-          Status Code: 403
+          Status Code: 201
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:14 PM</td>
         <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa501a18fe03',cH: 'Optkh.ZvYr_PnJmtQeFDAe.oz6XNvTKtmJHe2CSuFhg-1770300485-1.2.1.1-yifwzWoU0UfZxs86PwbSiHOOhIDKV0vgK0FQoYZyIf0qAXrVm4VGR5VRHdKI76d9',cUPMDTk:"\/api\/users?__cf_chl_tk=.0DvZqiFoADynBqZSRSbN_eAOu6Wi6X937wLAPW1kpU-1770300485-1.0.1.1-FgXFuIWN82HXbsph1nchOMMzRea.VHj91Jt.Ysvuw6E",cFPWv: 'b',cITimeS: '1770300485',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users?__cf_chl_f_tk=.0DvZqiFoADynBqZSRSbN_eAOu6Wi6X937wLAPW1kpU-1770300485-1.0.1.1-FgXFuIWN82HXbsph1nchOMMzRea.VHj91Jt.Ysvuw6E",md: 'wiTFr5Ida1E6h3aXEawDMFuu8_01XY1gEiYR6k0IZNA-1770300485-1.2.1.1-Hl9Xx08KFGFaD6XNhvM.tSLX4Xv44Bu9lMM1iMQqtnUzE6_t7nRKZ712Dcgk.FJwjuWNONs2OgqN0gFGj8hCQxh7UcuBGnJgnjxotJqfj4kDhAvbw1xLQU7Ca4Nb8maEUOhB8hl_ALwDQ7.T2qhA5VUcuVPg01r_Ers7Z3fI3NtOJH9IGyjghLU5Gvj_bCWAsOB0A4lN7nAJ0WYUtcMZU.mZNHGYOYDO0LOsalGSsbpYvasRhz_iurEiCbyjvsZGf6QIeJV8ol3CEmudL6VcAKwn5EERe_ELGw4Py3Ezi2xuEzRJYR72GcUPZNTyfNzivepq3NlCT0O.PTVJcD_uyuioF7OOvHRalQlCitB9wLkZV6pV1tDS.3Fv3Yt.YEnPxhtj8wXjhTyOwzmRV7v0hTbmg8lfSupFcIMV7bIG.gixku_JYK6ri7gxkgdm1RtnjU5UxFVDltFKcA8dEMDCZuYz5xx31aeNrS6JLza1lcSG6LxvVCdwfkGtcqQATikL_LPKW6yLBMWes_SBNKhFL4sQtp2BY4BFMu9zLO6zp_bxQvgrYHyOIJYF4KXnsyHoyVxc42vD4815ACuDVI2lbvJI.T_SOXbt91Wy5.b4EZXKz4Fy0bLaXNRPRhalrM0BZep6o4C8CcnFTsHDpx9zIMsjEghiDYvrKLZ0C2._clYrRUTAYap1xFRlLG4O9G4Ps1kE3UwJ8Fvy4yOtZz9Tu5FTrzc1ryNSojows9CsVW764wrxhhnn9mqw_8DALBdjo9S0Tky65jecfAurgWzudzahHnIs8jE9zt9CMAffNH_j37PdXjh76QKwSoPaQrOFYOU_k5Zvhzu5tau..fTeg3ynjludtpBn2sP9XTdgyArdxyTXwVxJekwbUT7SPyQEc6I8nlk8RYoVxFEC3eg3xuYLIquSp2H267Tha3ZEbH5Wdv6ABD8EiC14.3RbmM5k',mdrd: '3A6g7RwD1IWNq1gjVSk5wWxTm74BkgEcG83MIHfDdjU-1770300485-1.2.1.1-J4T3AvPhfyuy_i41a2b432qTfFIcM3h0ZKlMLM63K7e1lb_glrK4o2N4mViWImMUnwCgFx60dMK870BuIAH3dDBlTFayvqIXA1F9H5sBLdrT_PVidKrEVWgtCicciN499.tc1f3ODsqsTf540ixRKwVECZ4Q3PnA8mCt.im9zVW.DMODe4GpdlSJHFhQeq9Z5P.0L_jmTVpLh8YvOUGyfaacszk9HAAwQN18pPz46vG7Ky0Zn_TtJQok30btm6qZUtYG_WCx5Ume9Cnwo5rWtY8DO1xp5f897r8z9KxOCu7kpploDgwVzKopa9FJPZgJDW7hPAD2xXDeeEr14kc35Zp95MaXflwRe.1StgzBXDSQMS.AAhXTQnITOZ7GjFOSAB3TSVl6jP3c17zUsfe_QtGgJ579JhCkrb1yL67WIEgnKNB6oWBErTFPquI1okuV1NEPQFkOIkfrPUVton65sd5UbKvPX.oFUf8pB1pd82N4geHYvYWwj6k1Ydo.MCUG_Gud7DEy9wG0BcEw2cDKTffKA0jujh7pPH1HJusWkEypRJFs8Be450Y2qFUwi6RCxu26rtrb66Z29372o88xFhqgLbT_GtmyPdzO5AqLEA17EqR4aja8_E8GQ6eB8PDCjYF52fgSulZyBdKQfcDMTIHP0D_uVRya1IkORe86ZbvWy_Xe28UjRBpHppTiPs7uUDT3QSvmLd_CTCWeY8mGceB7Tgo2Fh0UL08mz8nQVJK1jTz7fNqB9kd_KrmiGgUgxXnBkms9dUA2ml5vspsG25SnbPS5u7M7IGKt5TMwxVa9iL24TBbRHmbwwRp2XFhn.deel9VRIntE8X2kaZbwdPCjaMPr_IRCvFtTEeFWU3eFdyHWHDoZGBprtX4k2plIQNZ7xc8jrmR_SG3_xcPD40atYmU4BglH6uxAaUY9Pi5sWpQeMhuEgpvZKcxCEa2cvj_9FLURKUEpicRSAHFs.a9Xl_lATQhdyLCSU3b5TeTd0V2SS.BDiIL6RFiaZZp0R67hlSzrkPf14IeGkV48Sipw6th4n2P0bvZVPdi7ND59RAt1jIJALDLcSgX_vsQFJ017boKGowtfunQ08TwvtjZHS8_psl9LYsaGslUMYD6tH.7TLDyT5_PE5Tl4UHw_v10LtWFzClbZj.rNmf1LcknbSfR8jcSwDmGDPU_VaVJDzNi_PoOjglSa0TefeYOF3sAZmR_5M.UnuWbQSYqnnJcpxFez4ybMapFAj7gdtg9ELLmKwTIgcoMjFw6RkPQCtOS3tURhgMJKiuGRFNRhEQAOhGn1Q4ZYHkmmf4Zm6_OO2gAsV_.spy2f9DI2xWaOAG.wMynCBpR1C2DxX3qlQ0wwcTOoQt_fb2hDu96lL_e32BPTa2GqrpRQJdj8DZLpnXhD0sksN9iLVyIrFpfiKWRwAeoyPQ4dTKPJZUC4iJbFAz1U39O0npUuPxDh1AHKv1_cvB8tMTIQCgBi6zQHeygm8JuOlk7pc8B5EJUcXW0ar3jHf1ompNtYyIaH_wToE5yoecv_Xl.BbqAXUw77t1abOkmBhx3SHtBr_BMr9I4PPR.rdOxuPM9OsoN7SQLI8fSSWXh9xAnLjruwrUtQ3AJHw4nErMu2Jy6BHku8AUv6LxyBGPu79HkIjpw2IzGUg5BM30jTWeMRHZGtRAG0CWF9pAlAmd7kGlsDdj7y_SVC8Z7_yt6Xsd8ijSXjMws0jAFUEbIxMms71CfHx8mNR6U5aeJlXgyQ9C7pYVmTRRqbdyVAv7dlMET8gr_4IO_0SYYnTwOk16VVJEdecQIgl3779r5wo5WCUT4TR.e1zd3kyJj7cwb7Cy5Qozf1CqVokDcjDWwVqVQ6mzs2RNep9FARY6ZFjkgIdYtFNIJhVLJvZZYHsVLPDlsPZTsKZtwfOKVWumg9fcXUeHviJU9ZA8R4MKQ6PckMkwvJRAgsk.j4VdGBDm2oDnJgq5KuSUXFdajinKnJOfk0LVMFM4ajwaccn1SpIEurw_B0b4eytWtcr9i7aJw1_4DGzZnfErDCFV0jIKI0G_ktA1Z3HM1xCNugHNgODrXdETFhuW5ce8rOr.qsxzZ_AOIEZVm29mZULiBTdjgzi7YMSJzqa3yTcJQJrVcvCKMLPuT33RGkh8CDAZeyJSIX4ALi9hYp44P4Ek58a6rJ_WDw9WGq.YZ_F7XLkl48u1xuu_CrtlndQScHGpiKAjod.u9i_4GuW21X8KK_xYLl2oArNEoOXvznnovLQK3VqvtVNZiYSWrMRRfE0HMnyuQIujuzFlsjqRwdHBjtBF9XXhCzkC1EUeJz19Ykf6piFJLim8tKEc7Zrs9FSLrN31DbOB0BHktBjiBVOTgnEYvd4qkVbCE0XNl6DEM5XgVg.h4uTG7eaQsWUMn4w.oRaO8lTfn4zOGCJ.Xrh8UYlOijd9ih5T0WPNfob1dK_9BL5aUXcFIiTiKisIRXnAl23rbvcv_XznFNGHAKJgR4ag76Hk7Ci0R76Qhgw1Kmx64ouxCxnMFMcWVPvkS9G2T9KI4lP7s4daJx1j5gRO7o3jj44ZDVnrjX1ritdDyL.DJCbZyBZOKI.4mRYJ5Tw.B2a9XmpL3c.XUPAIQHMjhTn03TQdoKN9OSXEDjow',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa501a18fe03';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users?__cf_chl_rt_tk=.0DvZqiFoADynBqZSRSbN_eAOu6Wi6X937wLAPW1kpU-1770300485-1.0.1.1-FgXFuIWN82HXbsph1nchOMMzRea.VHj91Jt.Ysvuw6E"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
+          Response:<br><pre>{"name":"John Doe","email":"john.doe@example.com","id":"665","createdAt":"2026-02-06T13:30:13.663Z","_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:15 PM</td>
         <td>
-          Received 403 - API might have access restrictions
+          POST user test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:15 PM</td>
         <td>
           Test passed
         </td>
@@ -155,25 +161,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testCreateUserWithEmptyData</p>
+            <p class="name">testCreateUserWithInvalidEmail</p>
             <p class="text-sm">
-              <span>11:08:04 PM</span> / <span>00:00:00:012</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:30:15 PM</span> / <span>00:00:01:105</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testCreateUserWithEmptyData</h5>
-<span class='badge badge-success'>02.05.2026 11:08:04 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:04 PM</span>
-<span class='badge badge-default'>00:00:00:012</span>
+<h5 class="test-status text-fail">testCreateUserWithInvalidEmail</h5>
+<span class='badge badge-success'>02.06.2026 10:30:15 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:16 PM</span>
+<span class='badge badge-default'>00:00:01:105</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -187,30 +193,155 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:15 PM</td>
         <td>
-          Testing POST create user with empty data
+          Testing POST create user with invalid email
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:16 PM</td>
         <td>
-          Connection error: Cannot read field "name" because "testData" is null
+          Status Code: 201
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:16 PM</td>
         <td>
-          Skipping POST user with empty data test due to connection issues
+          Response:<br><pre>{"name":"Test User","email":"invalid-email","id":"710","createdAt":"2026-02-06T13:30:15.793Z","_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:04 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:30:16 PM</td>
         <td>
-          Test passed
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [400] but found [201]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at org.testng.Assert.assertEquals(Assert.java:1429)
+	at tests.users.PostUsersTest.testCreateUserWithInvalidEmail(PostUsersTest.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:16 PM</td>
+        <td>
+          Request:<br><pre>POST https://reqres.in/api/users
+
+Headers:
+x-api-key=reqres_abdc43c872674a8ebf125ac633b65ce5
+Accept=application/json
+Content-Type=application/json
+
+Body:
+{
+  "name" : "Test User",
+  "email" : "invalid-email"
+}
+</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:16 PM</td>
+        <td>
+          Response:<br><pre>Status Code: 201
+
+Headers:
+Date=Fri, 06 Feb 2026 13:30:15 GMT
+Content-Type=application/json; charset=utf-8
+Content-Length=487
+Connection=keep-alive
+Access-Control-Allow-Credentials=true
+Access-Control-Allow-Headers=Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Allow-Origin=http://localhost:5173
+Etag=W/"1e7-iqteCTy+Q+rVNBOpiXwJxietE7k"
+Nel={"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Ratelimit-Limit=20
+Ratelimit-Policy=20;w=60
+Ratelimit-Remaining=19
+Ratelimit-Reset=60
+Referrer-Policy=strict-origin-when-cross-origin
+Report-To={"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=J8bZGTyLrTmkq0L1uwnts2xze9O8q2XNEcK9eWC465E%3D\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\u0026ts=1770384615"}],"max_age":3600}
+Reporting-Endpoints=heroku-nel="https://nel.heroku.com/reports?s=J8bZGTyLrTmkq0L1uwnts2xze9O8q2XNEcK9eWC465E%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1770384615"
+Server=cloudflare
+Vary=Origin
+Via=1.1 heroku-router
+X-Content-Type-Options=nosniff
+X-Frame-Options=DENY
+X-Powered-By=ReqRes.in - Deploy backends in 30 seconds
+X-Ratelimit-Limit=250
+X-Ratelimit-Remaining=147
+X-Ratelimit-Reset=1770422400
+X-Reqres-Docs=https://reqres.in
+X-Reqres-Message=This API is powered by ReqRes. Deploy your own backend in 30 seconds!
+X-Reqres-Templates=https://app.reqres.in/templates
+X-Reqres-Trial=true
+X-Reqres-Trial-Days-Remaining=14
+X-Reqres-Trial-Expires=2026-02-20T10:02:03.981Z
+X-Reqres-Upgrade=https://app.reqres.in/upgrade
+X-Request-Id=0d00ce5d-0418-6e4d-4ef3-82838dc6b36e
+X-Robots-Tag=noindex, nofollow
+X-Xss-Protection=1; mode=block
+cf-cache-status=DYNAMIC
+CF-RAY=9c9b0046cb10fcf8-SIN
+
+Body:
+{
+  "name" : "Test User",
+  "email" : "invalid-email",
+  "id" : "710",
+  "createdAt" : "2026-02-06T13:30:15.793Z",
+  "_meta" : {
+    "powered_by" : "ReqRes",
+    "docs_url" : "https://app.reqres.in/documentation",
+    "upgrade_url" : "https://app.reqres.in/upgrade",
+    "example_url" : "https://app.reqres.in/examples/notes-app",
+    "variant" : "v1_a",
+    "message" : "Classic ReqRes still works. Projects add persistence, auth, and logs.",
+    "cta" : {
+      "label" : "See example app",
+      "url" : "https://app.reqres.in/examples/notes-app"
+    },
+    "context" : "legacy_success"
+  }
+}
+</pre>
         </td>
       </tr>
   </tbody>
@@ -223,9 +354,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testCreateUserWithInvalidEmail</p>
+            <p class="name">testGetNonExistentUser</p>
             <p class="text-sm">
-              <span>11:08:04 PM</span> / <span>00:00:00:239</span>
+              <span>10:30:16 PM</span> / <span>00:00:00:766</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -233,10 +364,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testCreateUserWithInvalidEmail</h5>
-<span class='badge badge-success'>02.05.2026 11:08:04 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:239</span>
+<h5 class="test-status text-pass">testGetNonExistentUser</h5>
+<span class='badge badge-success'>02.06.2026 10:30:16 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:17 PM</span>
+<span class='badge badge-default'>00:00:00:766</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -250,35 +381,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:04 PM</td>
+        <td>10:30:16 PM</td>
         <td>
-          Testing POST create user with invalid email
+          Testing GET non-existent user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Status Code: 403
+          Status Code: 404
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa528e0c6038',cH: 'rf2z4u2oRbdRZl.GFdZTwUzYoopXS1YcVyRgQQfsVJo-1770300485-1.2.1.1-smBztTSmxIRi0LZSDRiG7TvPg5Pmj5BYGpiJxwwR8.3M4FWo9GVYWTRhuBm_b0Dx',cUPMDTk:"\/api\/users?__cf_chl_tk=TVOyukgAe6hpKE0xOo0Fvvd2BVj8YweJ4fQwiFp8NFQ-1770300485-1.0.1.1-61T4nmpZmkiJhPpz2Dw4N1mn3pajyXtxvEr1x3IYzq0",cFPWv: 'b',cITimeS: '1770300485',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users?__cf_chl_f_tk=TVOyukgAe6hpKE0xOo0Fvvd2BVj8YweJ4fQwiFp8NFQ-1770300485-1.0.1.1-61T4nmpZmkiJhPpz2Dw4N1mn3pajyXtxvEr1x3IYzq0",md: '2TEeLn4ysUjCDkpgJw1tx8M7TjNp3LnbQ9HvCo_9gO0-1770300485-1.2.1.1-MNvbIP4chluNtOJ64trst_VGjLd9X1Xtjag2FGAvLd49J1ZLo3IpIhYNcm9ExOTxoN7DxD0YVea0codUylNOsQKz8m0uCQqs3ASIq6Pa5jOIJIQVTB69uhRMM_Pp0Sf0hfrZ6CiSIvMcSZhQ.ZT8tgSo.fb2qS3UW_RBfIKUATZUZcAJVeXSF5Ii7U5HpARCLN3YCx6K2WO53vqlQtU9KSNTcZuEbW7Ysp.QpFLnIPDSKAOLxe9RDuFj79yQohhXZyiIrNdA0i2rmmtT.K.dHHbIdABGwVvmzH1ge2Xjuqor6npIhe1MLvNN4u2sKNWMD.3TTrb4DD0iYWeWj8QCWX8Q9PNNV1CMaOPqzuTgrPIXs56Jp2eb7PTCw2Y86ug9y4G5XrhZCjNPkXKQ2SYYwuLQL7OTKXg8p87ttD4OXEF0InLXAp2DO8sYS0X7k2dBoacyqjDK.SS5h_Wc3r62oFUSh1t3Wn4m18OPS3zPkdo5X8x1XeRO_Y2KUZHIYzuB2VLt1Vj3jFEwy6FG2PhQbbHecW1CxIdhfd64nYmnr1.kkNdCGpynuSiijsOdaFFhtqDF4mQHoLppMOdnRtc9ZTx6kBEctTJwXU3BTIhrINxu_1fKWZMLQ6ecxVwF.Y5PKEan1kZqytJm5hCs2PL5_R1kEFVQyKy0d_UwNsxZZ4_sRkIyBhPaBhKgw9qn0tpDAo2s6x9Kr1.JW5FJe_GY6dsuLz7tP7cQbJj.nmto4ML1.U_bMNp2BRFd_qWdcn9U3T0s2b1yKbh77EhW7yUv.6GJXMkF.oYW28jYo3T6K17PlAIO8Jygr5xKXCjAuKiJe7zx1YeS4Otixuc1umi7_GMVeIxLRts4ILB6z4Tb_I.3zNWdgO4ya_j8C8uByB5gQBD2kDhgi8Xowp1XYipsazcbu716Oat_I7UDj8MMPWVF3smqU5XUOlEUsDpXCb8j',mdrd: 'siPktx8ud4dFRTzNqoIchhqPkpY.5rWJobGyjfsC6J8-1770300485-1.2.1.1-FIw30SrShvbgJllAJLMi9vaqPW9ZM1ZoeaQGFMUjyDAgsouUw6_O6DSd0T_2_IK_E27A_vfaQQLdZQpt18pJ521B8CSHcQez.EpCGB_J5mbRfD3aIgvDQsgu8qjUy47MSQgMhweZm10aDvYggM3WCknlmfJLBRU32LpLD9IW.M2f75eRRWfmUHUMZ9WWG_WVGwgpa4BeUhAxR2Kgma9XSVvsOo2DZUisbLSDIo97Po0AyWafIA.WkRs6pPlio_j5M08Mus7R87DEp1HSkRiRcD6iTW0VZtUoeEUSLZ8GpN1SYdSUKkvFBOC7ZKF3Tx8W4B1MNE83lh.RPovMzoqr.5jBsPHfqaYY4dxinkc5zkkYZ10KmIfa9UVGkzvZF7.ISl9JKwP1M_OZ6CaepehEHOeHDTbf5sBRr07QzZtkoTn.Xughgcbm.ENG.jJwiRZ22LQWTsIvAbWuStN3QQroSpS_VjBmT_Qws3CcNvsVYZGVQzcHkYVfGhi3HFsHBMEd2FWxPrJgsPyAB984FlZ1o373TcMAdOhJFqACWI1e9dshpzNTpJ3vSAMxNI8MF3JKFVBaXxUjLU2yeFVKmrmjeOgR.3eA_ptZfbFUEBet_AYvlu8AzmzMAFRJ45MNSFtE8LRVObjfCqwthMGPSAJBgZxDUT98CCtBVAxdCiaGO6NDEZQZ18PxYilp66Ml0iBzVqJUAeIiwftmKLYUkJ2Ayir61tT9g_YnOGTbLdaS0JIOoZcU3WuVCG9PTM3lh9GgWLChBNyAKq8psgmiu7iy2vd0vFADgpgqZ6hxH05DfeZynH0QU6C3P2K9_cNlxLC2GDQrZsLwMUcgSevWR9GwRnGAcGn2xe8gpITfNcw3L9QfpnWQElj3kGk1pfMf.TlOGxZF6lCgOrmszJljItPAJbkQiGxaLnPPpaPEHtZ1m2zRTBGpEMOKlRgZrc3XAMFsmgU1NxGnkU5glwA9DA8Sb4KqqSm3GgdOwNouYW36xf7hv0r5Ub4iyc2YHJk6e1Ok7tdY_4Gg7OsRsSnL.x6TV74W8uwBik5AA88mT7XsKBZsj3Zh_2rBXU00JGkOov6QHJyKV_6O2HJUHAs6A4V9RwjAaWOBIiKN8W3EyeluRPaSYlLrC33T5LoHGsUrW2IQm3NnC1S3yyA4oNHvszZTQpurxNFWtdBJXcpGNa4ShIeAMQ0VZyv1jbmAi2CSJpS8p8vj2Cv7X4m3P_AatzbKzeMAUh8LcGl1cfkHw1w9wmknFQIhghRc3XRWaXtKDIcVAU5d4TNnPNPays7UgajqDsiAtL5BovFDs74uelG2T8wwhJ1XBCz1K_RRWpE.hql1spfBdQtbUNKqR8Dcg9AA2csAvr3NvDLzb2_KPwSCgmweE7TNQ0Mqfm9m_06vGkM3Rt.RBlZ0uJn6Hl9qSd500VA9HwKTFTuCcb4WnE6woWVs0e5epfPhTU8Q7XXLyDfagGTLMk4vPvyxpkEBrNIy1WsfIJbpFPfzTNPhTtUsMlyIKGpG0KUrDFmnlDoj0asXsjUsYc9PbUUz9LsJ6hqyMSYQKtaVCHruffZWTBbvT0xPGYr83alFoscZ1_hxyhpyV2KFmlIQnORKbzhg7qjjWaZZD4d0wMUebkCaQfRISiudWJNGWN2NXQAw.4k4uqKcXn4xSeHhvA1ORjTZPESE3zami_MnCDWkjNR2CaoisC7Atr78vWQzx5tKJhXZm8KwMj00S6vxnH.Sc9i9MvEzpIK1glftvOeEhz32uVyehbJ3WjFFbKG0nGp4_bPuHe996Qhbo_csSOKDOYuJ0cFYfxZbtjRHkdA5ADq4GZvbJqbnPCrSLGYUiR13TMxiEVL9o8T1oqKFiheJzlLpjOoqBxk4iTXbN_Zd7HWecMva_FvoPjtjGiLo_SyQ93vXpaPHAk7_3TKBp_rY6ddMOf58byN.M1hDPP.QlgeOu2B9m0koY0FOF5leerUckYLB6PG3gJKBi9p20ylZDaMQa2v9oaHpFdGbtY5vXtWtxx2.by0tBIo7X1bga4U2Vz94FU3xegci6t95dP_HavVUekU1dCW_exMzfwS_NjgNjWGqLTgxerEgTfNxP6aY7aFXlpcc901hNRC5BMAaCRRtjsIQ45Jt5mnSzWy.UsVukUPacqDWe8fL6wYWSAjI4mG7Zzav0YlAW71R2ANKiRRMMr6f_Z8I1QvT.GemrQX3rP6BAHFms4hjQ2opI3RrXj6h7hDUTVKg98TwXu9YIWUsmcRQ8f6KBKWu6Aq20id9ozjc2j_hBPwyW72A6_FnMLF51u1Sih3V93nMuv8sOwN.iNvZD6Tk8wXq2jjMI8xUJq8.Osy2g3KmI_RWBfHyvp6PH_FvMpFAT5j6PtvxYbVh3hSSQdnZ6csGTCZSt1aYUmjeHELS5Vq7qeRpH2IktcdOQ5hJT.Wjgjh8oJxI5THvdA8g7Jxy0sOgP4zUSKPrRUPv9Ek7.v5NFyKz2W5E9coMHzQ426MRTtNXaxTn4obRuSTTSTLviA.bG8_JEBqKEYrEUTrA85thc5X1EZ7hWEVzw_x9iJ98081sng305nzjOXThqwZoR8OwMe0X2MXN04yp7AQsXGwolQRdlHfp_zhGLl4t9O4JTvN6x6fKHk48UbPyBw.nJoSddqXRsHj9Dzgvkj4',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa528e0c6038';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users?__cf_chl_rt_tk=TVOyukgAe6hpKE0xOo0Fvvd2BVj8YweJ4fQwiFp8NFQ-1770300485-1.0.1.1-61T4nmpZmkiJhPpz2Dw4N1mn3pajyXtxvEr1x3IYzq0"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
+          Response:<br><pre>{}</pre>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Received 403 - API might have access restrictions
+          GET non-existent user test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
           Test passed
         </td>
@@ -288,25 +419,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testGetNonExistentUser</p>
+            <p class="name">testGetUsers</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:033</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:30:17 PM</span> / <span>00:00:00:036</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testGetNonExistentUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:033</span>
+<h5 class="test-status text-fail">testGetUsers</h5>
+<span class='badge badge-success'>02.06.2026 10:30:17 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:17 PM</span>
+<span class='badge badge-default'>00:00:00:036</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -320,30 +451,61 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Testing GET non-existent user
+          Testing GET users basic functionality
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Connection error: Cannot read field "userId" because "testData" is null
+          Connection error: Connection refused: connect
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:30:17 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: Test failed due to connection error: Connection refused: connect
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.users.GetUsersTest.testGetUsers(GetUsersTest.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Skipping GET non-existent user test due to connection issues
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Test passed
+          No API call captured for this test.
         </td>
       </tr>
   </tbody>
@@ -356,9 +518,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testGetUsers</p>
+            <p class="name">testGetNonExistentResource</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:058</span>
+              <span>10:30:17 PM</span> / <span>00:00:00:688</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -366,10 +528,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testGetUsers</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:058</span>
+<h5 class="test-status text-pass">testGetNonExistentResource</h5>
+<span class='badge badge-success'>02.06.2026 10:30:17 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:18 PM</span>
+<span class='badge badge-default'>00:00:00:688</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -383,28 +545,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:17 PM</td>
         <td>
-          Testing GET users basic functionality
+          Testing GET non-existent resource by ID
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
-          Connection error: Connection refused: connect
+          Status Code: 404
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
-          Skipping GET users test due to connection issues
+          Response:<br><pre>{}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:18 PM</td>
+        <td>
+          GET non-existent resource test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
           Test passed
         </td>
@@ -416,12 +585,12 @@
         </li>
         <li class="test-item"  status="pass" test-id="6"
           author=""
-          tag="resources"
+          tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testGetNonExistentResource</p>
+            <p class="name">testGetResourceById</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:000</span>
+              <span>10:30:18 PM</span> / <span>00:00:02:936</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -429,16 +598,16 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testGetNonExistentResource</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-pass">testGetResourceById</h5>
+<span class='badge badge-success'>02.06.2026 10:30:18 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:21 PM</span>
+<span class='badge badge-default'>00:00:02:936</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">resources</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">users</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -446,28 +615,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
-          Testing GET non-existent resource by ID
+          Testing GET resource by ID
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
-          Connection error: Cannot read field "userId" because "testData" is null
+          Status Code: 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:18 PM</td>
         <td>
-          Skipping GET non-existent resource test due to connection issues
+          Response:<br><pre>{"data":{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:21 PM</td>
+        <td>
+          GET resource by ID test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
           Test passed
         </td>
@@ -477,31 +653,31 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
-          tag="resources"
+          tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testGetResourceById</p>
+            <p class="name">testUpdateNonExistentUser</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:205</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:30:21 PM</span> / <span>00:00:00:565</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testGetResourceById</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:205</span>
+<h5 class="test-status text-fail">testUpdateNonExistentUser</h5>
+<span class='badge badge-success'>02.06.2026 10:30:21 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:21 PM</span>
+<span class='badge badge-default'>00:00:00:565</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">resources</span></div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">users</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -509,37 +685,155 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
-          Testing GET resource by ID
+          Testing PUT update non-existent user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
-          Status Code: 403
+          Status Code: 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa54baa3fd3a',cH: 'Bb420zW08UqHxTD1q_KIckL5tFdjKPiXwOvO5.piXfc-1770300485-1.2.1.1-kZFwq6Cs4taUBjizVXf0bylrxZtKnx6kW5u4jXz0l7f_ZbFaYTocKrm_mTPIA8F6',cUPMDTk:"\/api\/unknown\/1?__cf_chl_tk=nIqAZ4oXArHj4bglH1obJT6w8GmMNCF6srhfNsuVVxk-1770300485-1.0.1.1-WK7_EaVnzO3bPrAQc1RW_76ATZaxIvIddYMhKtF2k0g",cFPWv: 'b',cITimeS: '1770300485',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/unknown\/1?__cf_chl_f_tk=nIqAZ4oXArHj4bglH1obJT6w8GmMNCF6srhfNsuVVxk-1770300485-1.0.1.1-WK7_EaVnzO3bPrAQc1RW_76ATZaxIvIddYMhKtF2k0g",md: 'QiV1hyDKbgsfAnohRVfoH0qB.N.ixWfqAvfVWri.qVE-1770300485-1.2.1.1-k1QRReugEow_dMT4hl0i6HFgfp46R9lq7w04m.iZHCd2I7j.87vhzwgZGoJsWYG_cpCn4cImTBvW5caaBaLDEDHxpa8I9yuZWKV73EdofEHEtQRKLeDM5DN_bz3xIzCWqNRn09jRgpdioGLe1tsEiYBVuNq5xUmhnHfcihW7zF7RFLqTxUwaDd5golekRhDntL5iHpISSZJh54BJ.eZ6ccX3n_OnrKf_hvZ90fn791E8QxmLgWO5slWoQ_MVOCRDwBZ.vTlDc5pxjK1wvKV9rm8aDUj6F_XYlTiFdJBQ1ZsCYHdoUqpW7CkTvnN.iDsYtT_5JJrkVBFVSTtgCVCMCd_T3HcH8qs0DlAzCFJaz9fYZ9UppdMZhsjISaTSqTft8o80HCTkL73dLATXMv9qtMw.AwQhoEOVz8AwDN_UgU8dOqvTJX.TgfWWcFNPzG7gtIxLi1tqBSBdVUC2aAU5l0cC9Gw.BtPjwqFhgLbSr75ffmHrUSfHMTvADDfsCWPTxpALp6qd6.OWu62CExHJlENme9kljQiSjntnIjQ1QFQPHRueDJehLlsFUyqweckJHjfbnqSWdP39XW1MhyLDlFXwDtaD8ojWjzoT9PtqDGw._Cpw87oI962Uuxm8Wz.wkT_xnF8nu9_Syes5yNnZEKlvrJtKZ2GOP3YqnbVjCeZMB.V.qA8wSxItXyt3LFyevukYfO4tEr_Y5KFtd4FKZHFM684aRxHWVCAOx2YCSsroSVjrdACIVMFclFV9cFx2zSl9q_jUZwYKrOiDUCa3wX4fQvd7xF95.oXbYyKhg2AXY1XnziiE8wvWom6TfGgKOze_Mh4jj0RIWKRGPajTqAsNRJmorUSb.F1IJbGUs.TkvQOWRwndNNABECnJaTdPas6VS_Vu5SURvyUb3Ot9eZ25xtRHBkdRwo83wb68cLrPwSvSXJEBTF4qufKNwsjq',mdrd: 'mtWuQ5xYzDnymfu2sBM1x8k7zoLfntDUviEwEY53dXg-1770300485-1.2.1.1-wppxjp5Vbe5tWuEsSGRE87rxih7ZPtuCeTWTCmXcdmI0xMrgEolmHkHsSKaMRfNEE0Y7m2v291klPDkk1aH4sXm965z03GcG9uNZWBRj2geAOKVw0VzsOPgvYOFtDvVKx49dgkwOo3APHF6CZjzXmUbXl_RcixO0myXXoHOnNwUyDv_qusiFif6s47mb.AMWHeCZGhEapWdt__YdYK8LXsGHYOJWOf5TV5oFV7MQkOM5O4e.VLYtgt0yz1pyLrBDYsw8HqZQwrd0GswvY.YsbxhqxoBfetkEqV.ZTWXEhGeRB3uUWDccCSBUpuPg90cvKrB3wbyjrbnjCIJRursWdHUpfLl20CW_28CYvCrtWmHMThvPvDHKCisOpZhERyikvL8svNg2ZXKvzQcHBqRLs3n5fvgBPrUchXEWaKUf8.iPO11guy66ccn4SbGeWyGQcaAw_mBweoihIXxHyE8qQf9cYjLqI5R9S3jgyjmk_PrVzXV7gWJ8aYqFvopBdgAOe39FkV7WC8UcSV5oZfAq_ho07BZxZZGCvyH8SWWjWR2acD0dhqy3opGXFSTZ.NgT67F2.IBzPPDwTIwLTq.UpMv.KWN_31cVZLUb4e4NO8F1HoBhb_TxGl0rLguZpdcwKmUrneWZ.Mb75ceIfn2WGLCJ1vQyPPvEublBas3LVlbwfodf.sXEIhkOr25.lMsxpcoez14guBptqUc6xOhgwQf86maGgKb3kFK2ENUag93FP2ScXDb23W1f64gCqRc5Zqiplb.jphZMWXwXmt4Ht6vrMbmIbdP4MfygRQu.lzT0iMyDAQrBLzBWkozXT25RGWeGO4fmlvSfCVBhWWu1Ed2HB1sIixbkXVRjxlg6pykAoAZw7lMecSNuV02h0bnRLm3BmO7F.AoKr929zsP2DqIxlID34YpScsERKEL9ZlhyuJrsjD_xUgb0cOrO9iMGQlJpgyLYF4gyao0U3iOsN3nn6lQ5u.h6BAtTLF1XxrY55gN7zcTTYAwx43bkdcZT8JzjjGd2yfDgfZhbh2zrkdUrqCWta5f0ZfC4.6NGbL3vOVh7mzPXKuJJ1TqNBlMvWGMa00nsaQLOa4qyNh.IMK1Zar.RulHoPN8yddicQLBSUFS0Bz5LfF5FHz6DIgMi9g.7VpIbiNKnoYwInPV57AvnglvgAQlo3n9Qv8lXa7GMYGs61jneLDe_VLqAgUOSTBzNVdUXSNMR.1lMZR9Uf7IJl_hdfVxPoSAomU15XtFgBbSrIR8a5GV8qGJYr2L.lspLHzfT.9apV06PCwPo7fCOcU9tJa_TDuxWnPRmYpJI5bh2oGw3fqEPwt_No1.ujfF3uvHEp4RLlDTam8.nN1bolNeTBrrurVqT3oQLL8pKTUztZguCQrogS7Bj5fDUCqeteJj_kwcELYS_bjEZ4TNIe5H1sJqP7xTRiGu71XWy3OOzx6KP85BEbMMvaOqngGLrFXfgEHOWV3_170J3p1PUP.49yX5eByX.cH5gTHGFX3E6IZuxwCqpEkK8SqydfG7C1YWVVEGCu.NG5soIC5m_K.LXiSzPX22m_QHmhzsoZn25PiF1nh30M9wZLh5LNB0ozDVWgjeZuKkv1Wm6MQcnt6Su.VQNY3Q4sGUc2F8Ya5rdyI.n8OP4W9kMxsn_opsB.m5IXnY.1BZItjy2D3EkmSQk88c0BzdL.lL_5DSlzCpLuuSeg_xfPBNMO.v_pyvC9DnpFVmiiMAOJY70GRbXeNdQfhdrObwKQYVRJtHcXhneZm50TWEl9DjSbtISKNd.BActSO_q9vfU9pBDanP327u.FT8X4Lv8OkDjOW2foEbDqG.U82OWA9THLtHCnB3aZgd7LWsvTizmIbzP377MxBYMiWCk1bUwP79SpO6OD5p9LuVqhjvYLdHm4t0o8ChpjlUkkYAl0ZWpmCO9_ZmTAsySCBXsEKCPPJcrLKdb6dv6nY59w40Y8uAgL2OClut0PyAmJJxr165Ws1mmnzABJ_PiF8Fk7NLhE6NEV_9mHq9jADSTB5mjDva2IUWRq4udIKYO61lZhfoWcOd8sVub05ERpA4rq6dpDbo8ogSFhZR_ZIp_tps5HlGBvDRJVmsN6ZCXxDYyEmN.eeOIroMfgn3Kj2MlXLobZsZCd8lqRR9cuI9Npw4wBxoDvGrL142MoyQj6la9e00jlM22QMenUwu9ndUjlWAQBG_M74wNbC4mpUfDsTs3EIE0QilrwfSe3oAZtvGWOWlRvhhKC.AgUDZYIw3egOK5HOBERv53gjh3G3E_rOXesX66HJAxIg_FOjVayEoVvSXNNO7YlJouuSKQbBWEBkiN8qs6YV5jQneGiqOPBt1VR.ck2URO4LkItULLOoxmCl55Z0DzOLG1uxeKGa63HpO0TBdKEkEsqK3e3yWMQ2XD9pLdxAcWMF2glelsYA3s6TBwXIDSIMlWFr.7LCFqJQp04qc8s2KzuRD2YwIIupZ3ttNvKqGrxl7RLMUWY9.CM9L7BSwcNGgs0LkDjCSBSEvZLtOj.TE',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa54baa3fd3a';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/unknown\/1?__cf_chl_rt_tk=nIqAZ4oXArHj4bglH1obJT6w8GmMNCF6srhfNsuVVxk-1770300485-1.0.1.1-WK7_EaVnzO3bPrAQc1RW_76ATZaxIvIddYMhKtF2k0g"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
+          Response:<br><pre>{"name":"John Updated","email":"john.updated@example.com","updatedAt":"2026-02-06T13:30:20.859Z","_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:30:21 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [404] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at org.testng.Assert.assertEquals(Assert.java:1429)
+	at tests.users.PutUsersTest.testUpdateNonExistentUser(PutUsersTest.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
-          Received 403 - API might have access restrictions
+          Request:<br><pre>PUT https://reqres.in/api/users/999
+
+Headers:
+x-api-key=reqres_abdc43c872674a8ebf125ac633b65ce5
+Accept=application/json
+Content-Type=application/json
+
+Body:
+{
+  "name" : "John Updated",
+  "email" : "john.updated@example.com"
+}
+</pre>
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:21 PM</td>
         <td>
-          Test passed
+          Response:<br><pre>Status Code: 200
+
+Headers:
+Date=Fri, 06 Feb 2026 13:30:20 GMT
+Content-Type=application/json; charset=utf-8
+Transfer-Encoding=chunked
+Connection=keep-alive
+Access-Control-Allow-Credentials=true
+Access-Control-Allow-Headers=Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Allow-Origin=http://localhost:5173
+Etag=W/"1ea-I2oGhXoGafSAJ50RzYzE4YqaWOY"
+Nel={"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Ratelimit-Limit=20
+Ratelimit-Policy=20;w=60
+Ratelimit-Remaining=18
+Ratelimit-Reset=56
+Referrer-Policy=strict-origin-when-cross-origin
+Report-To={"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=cqaOj6BpSPmdCYZcokABOZMOxm0w1oOcEEIx9TiHPps%3D\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\u0026ts=1770384620"}],"max_age":3600}
+Reporting-Endpoints=heroku-nel="https://nel.heroku.com/reports?s=cqaOj6BpSPmdCYZcokABOZMOxm0w1oOcEEIx9TiHPps%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1770384620"
+Server=cloudflare
+Vary=Origin
+Via=1.1 heroku-router
+X-Content-Type-Options=nosniff
+X-Frame-Options=DENY
+X-Powered-By=ReqRes.in - Deploy backends in 30 seconds
+X-Ratelimit-Limit=250
+X-Ratelimit-Remaining=144
+X-Ratelimit-Reset=1770422400
+X-Reqres-Docs=https://reqres.in
+X-Reqres-Message=This API is powered by ReqRes. Deploy your own backend in 30 seconds!
+X-Reqres-Templates=https://app.reqres.in/templates
+X-Reqres-Trial=true
+X-Reqres-Trial-Days-Remaining=14
+X-Reqres-Trial-Expires=2026-02-20T10:02:03.981Z
+X-Reqres-Upgrade=https://app.reqres.in/upgrade
+X-Request-Id=82c0760c-bbbe-2b87-7f7c-5f54978a8d38
+X-Robots-Tag=noindex, nofollow
+X-Xss-Protection=1; mode=block
+cf-cache-status=DYNAMIC
+Content-Encoding=gzip
+CF-RAY=9c9b0067b897fcf2-SIN
+
+Body:
+{
+  "name" : "John Updated",
+  "email" : "john.updated@example.com",
+  "updatedAt" : "2026-02-06T13:30:20.859Z",
+  "_meta" : {
+    "powered_by" : "ReqRes",
+    "docs_url" : "https://app.reqres.in/documentation",
+    "upgrade_url" : "https://app.reqres.in/upgrade",
+    "example_url" : "https://app.reqres.in/examples/notes-app",
+    "variant" : "v1_a",
+    "message" : "Classic ReqRes still works. Projects add persistence, auth, and logs.",
+    "cta" : {
+      "label" : "See example app",
+      "url" : "https://app.reqres.in/examples/notes-app"
+    },
+    "context" : "legacy_success"
+  }
+}
+</pre>
         </td>
       </tr>
   </tbody>
@@ -552,9 +846,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testUpdateNonExistentUser</p>
+            <p class="name">testUpdateUser</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:013</span>
+              <span>10:30:21 PM</span> / <span>00:00:00:860</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -562,10 +856,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testUpdateNonExistentUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:013</span>
+<h5 class="test-status text-pass">testUpdateUser</h5>
+<span class='badge badge-success'>02.06.2026 10:30:21 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:22 PM</span>
+<span class='badge badge-default'>00:00:00:860</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -579,28 +873,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:21 PM</td>
         <td>
-          Testing PUT update non-existent user
+          Testing PUT update user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:22 PM</td>
         <td>
-          Connection error: Cannot read field "userId" because "testData" is null
+          Status Code: 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:22 PM</td>
         <td>
-          Skipping PUT non-existent user test due to connection issues
+          Response:<br><pre>{"name":"John Updated","email":"john.updated@example.com","updatedAt":"2026-02-06T13:30:21.625Z","_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:22 PM</td>
+        <td>
+          PUT user test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:22 PM</td>
         <td>
           Test passed
         </td>
@@ -615,9 +916,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testUpdateUser</p>
+            <p class="name">testDeleteNonExistentUser</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:188</span>
+              <span>10:30:22 PM</span> / <span>00:00:00:885</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -625,10 +926,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testUpdateUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:188</span>
+<h5 class="test-status text-pass">testDeleteNonExistentUser</h5>
+<span class='badge badge-success'>02.06.2026 10:30:22 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:23 PM</span>
+<span class='badge badge-default'>00:00:00:885</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -642,35 +943,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:22 PM</td>
         <td>
-          Testing PUT update user
+          Testing DELETE non-existent user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:23 PM</td>
         <td>
-          Status Code: 403
+          Status Code: 204
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:23 PM</td>
         <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa5628ebfcec',cH: 'c.E28adtTSR7lPXTzGsghrKmxP6kl9SLZU8lYYlJ82U-1770300486-1.2.1.1-yvIwc.uSkxQFQL_rTiDzcwlibgdZ4IivhbO0HkpNSboo4igzm9vQO9ErqGYx4HiM',cUPMDTk:"\/api\/users\/2?__cf_chl_tk=F9WVdse0A3WFN8LBWA7sEzMPa.1Xc_ERqrcMNxBqrv0-1770300486-1.0.1.1-AOYGEQsecTLPG6rX0KMe3Y2r9d_peFo.v5XKzFV_49Y",cFPWv: 'b',cITimeS: '1770300486',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users\/2?__cf_chl_f_tk=F9WVdse0A3WFN8LBWA7sEzMPa.1Xc_ERqrcMNxBqrv0-1770300486-1.0.1.1-AOYGEQsecTLPG6rX0KMe3Y2r9d_peFo.v5XKzFV_49Y",md: 'YM4cVSlu7sZdV.PU5jKtsYzWXiMPV7COKZpvBN.1oCo-1770300486-1.2.1.1-TC12ZCD9O9777ypCNl76PuOSkUp8PKHrfwgSFu9w5RpQKfywpRwNkL0n4fCR_dYg6jRyqx.ma54y2unjnZz0dMK9XOJsegvMsqBWzkjXL3_Bd4bjpZ2W7fy1GvrHqij8itSxkhNxbwLLbWdNdbzeAuW9ifTyjKl1XHVlEqm1vdN98p_95WJja5M96GHEKj.csItlYOOVNw8v_Zs4Q7au2udKAOtNxmDZBjxlYqOfIsAtdGw_v7Jf27xmfvPxyzkqb7k6shLfUIRo56Q_lC4nxIS79pQG7JcKMMD4nonHycFapRT35Xs9CNrJCMv9z5D8iupiHJPCGJoudcmVX4SIRo85KCJP80A_pubmot.i9pvbQqFYogmAx3epX7CPOr04C_7nyZrSAWtz.QVxd5JedlsZ5kTgRWQAUABZ0WlHNulj9IV3bDQVeb5aYRliZ2AvoqS31C0cufgJkIkMqHomwsNTAo0w2iuNKDqnlb9nDBUSd4tkPA5vnhZRdXYdF7ZT.PXnkd98_ke784dejtoCqQBqYxmeV1ffTEjDLy4RAXoiBldssEhiwRJJdlmAtX.OAI2qVmGob5r7MZpPELki3OFLpFA9E2pPCk1TMeS.42rHVyXagr90xPkoL52x.I6E3h3pKG4ldVGhOWmzhrTFy94PuIo.3_r1iRj_ijYhPFdV6LHx46Hn7mz7MolBzl4XyqNIOVS56yGYCKS8t7RsJZLRTqhzcNUzvjk.mF5GdCF8J3Z9d42S9RdMIJ_Kbu49JVxeeESOiQTraTloA4ednE3NYMkHlCBHsWqrxSekmX.EPdl9lkygXc07xiFxUAoZ0OyVXsr.J7ppDeaX9lfrk7N8cApBWPgz01NF6qs4luVymzJKbuJr3izWKC2eyoebY9cikRwfcBFb3iLULckyH9Jvc0RtpWonrDy840Sc6ZZUxCN_qorI4cBJnNhbYXlb',mdrd: 'X29K1DqSXIN4LEZmvKOkUXulGICIVCTdZNo6W1.etVI-1770300486-1.2.1.1-1fcJv4_YSJWgRbaz.MFck6_WUq0wqGgnlxwmdvRPqAjKW1ksINl.XQaQKjGKifMk0wHUB_fYrUcnv0F2sVsJesDWq3KP07IMpbBCLZQy9zHS2QcCoejBg5nPWvBqiLaS.PbXEI5T5iSs5H4x0cYtMZcaiUQHz0NxAnO4Ken1nftQB5184NaywT9hyjChW_LQDYbGPa2nz1lbH9loOnbyEsZ2INmjT6Y2dkJQrDrSR9rjPhgkV8UD.pjwClSYkrqMFFu.rkOP6ticH59LIwfe0mssSBPAHzxjLWiE9_7PxYorKXtmL7mvnKT03o_9MOZkqWqxsnsdgol8x0sIS4hoYzVJ.vmlQDVzwH2gQeu4Vs7D81jMvKKyZD9AW5IawWF7ppYEJt8ZIt3v_JCGfCz0f_BWuKx0HD7udVGecx0i8ktLI.kdvUmfTUdq3e7PG2Jc6PE8oxO2XLM2yhq4ByxJqkgc4dMmzINpBqSJmMetyb3J5ryxqiHq.R.cTocWHWWxVnuC3JitP5HrRqQ3cphkByqAki8ZGryKJmDPZD8cB1ySauDkhWQhnlNj0a2hseaDF8C2rBSBW2fRpbmFoFPVh3zyRFs.W8kbB8Aasb59RdK99J6tkgKAw1PB1MJo_DbH0RFEYSAUQVXgC0Vd8YQMYPSvbVfOenLSsEwzsqMjumBJRDSJl5e_39reHeR9..lq1MvZJlDR7xBbuaZyk0lDh_Yxs_RsonlvXS.TIGkRkxN96_cacV.7H4TRow8J.SuaoQduKvvTVZTsTqY_na2qbtqvQW89y7W7I_W4VJKIvv6NnnYIO_fYj.zy2r1us8Dy95tXgTERIt41t6xp.8k3khiFBRWB2uwEykxHULzT2mREOl96Hzft1TqyV1DMx3LzCNU6YUAVIqlkZOFVMEA7YX1NKJwxVU.hVgp2RwSvQeRE8w3mx1lm9asA6s5nsAVqK_fZGpXGYdSvC7NBL5ANcPBihAm8YSicilZC.wZlNhxRTaj5Svuvk888q5vLegiCyLFxJGDkla3xM04DY8G8tCl0iGpwwczRvW7004r3GVSNyisW5v_yGxcownCbqPaFLyF7dQSMewgG9qThdTBxNEycpBG1y80y.5qw8pxh8T5MizLl.gRoZesahg90A6WIJspQ.jmdCRXuWCB2A2emMR2EgQ9L9DLdfUh1rCLywWvAFRPZMk9Rwcj_HQ2VVjm7nrz3Oh17B0uDCctz6.DM6Z_BhOudTofkGpTfMxOYb8cuY8eKFdS1jyVAFmiSz.dSeDfQfD_8lw6EBbBrfgmRNJsHAGp.0_pF.sI0WBYPY9YVmWAS4EfLzYWuyHD3LbRncadoiT1aaWF.KS3ZmReODsJk7OnhDyIPKCtZsQg3FaKNcMjIEEK0RFc_3IYhv0DeNoEGMtHlbr3e.ftZmvmI9QTwFABiBAwc5vze41iOxrn9bN_rn8SvVcIzgKmpy9RJnTr5L33FIJF7EWA0Thu7FZ.U3pcb83Xe12f3eRO69wtUyIm8PwXh2XfZzEa5V8yBuUMBcoHXfJr5ayB2oxYbzhniqyX7LxLpK6lDFOS5egT6MXsGrWY5xwhFuJuGnpkHu5XLPI.u.5FGA3uoDdNLc9hnGF4tfXeUi3cIuuYFvHUmG15rMP68GPqVhg15H97W6B8OD0uLhVBRefOGoEqVtkSDrpFMVwEyfodfvpDR2tDQFIP9h.kjcbcQ3DeGhYofG4OJWwMxWbwWSa__9uI6wVtkB6By4qq5JB_ys4pumUpywUXNMpOsGVGFxvtfmkRgy8m16e92Idw7LxtVNpGkL63Ub6tJcW1dOETsU5QxXXD90tPrN9wlw8zwXxeaQKO30Hp6Wb3DKYH4PjMGGWA7m_7zG63Uy2XD9cQdrgErv6ATrYvQFxCKzKHacrEL0IiLqrADpJuNr2iWUvnPtdoRqrlWMkdY7F3rQ9OzhATwd6O1bk5gBuyLIP1zdMMnsQpXlRKjQu_RNEHb1c_fifGKkWcmGCkzLR5mBPj9DoWvv5XAEC5fGYHFZHfQDmq6fxsrcfBZ7YEXBmmaw901h1yiEi0Dbe482SEe0Mk_4ayiuPCfK73WyCyGrfCb0dMatT5U.irw8V4reKy9VQDPicLOMvVjyMbC8Lc8HhvpXyOKTjBE464WqzpYGwXlbVcRw5S31igfRhp_B.5GKsDGmNWcaPllE74Wd_SB8XiLPfUnS7.D_usST9AMgUFpvpvOtgrGaNkKzoUiVNKi7Ll.tEiUgabR1ELR9SIcIKkEXD_XhwELuV77GTjNVn9lFeNAYmsjK4J4_MPOBvDOy7qgj3Wx1CUtUUhZprlywbOh3wPVfKuZtzHLc8NmHc0daInh__snyWjSMKPiwL.rqmnL0nM1yLOplYLfuwsvdSsvC1Kgch66UuyjRLD4AypeIAmEx0dv4wnmygyIM2hn84ECKlWLV6wV1lJx7cJwwkNeKgLU4PbHjKnU8LtkGfi8i2jFuDDBBWQybVzBoJXOCeBo4GL.y6a8rqg2NWeRZSG4F.J9zrl47gvvqV6cngmcSlMYMmNTWvSJ4zS9A0gbB2EmKH696eMO4IMWW1obPe_060iv250MN1FiRpQNoZiF8P.6RJUfwwHgIuqjTgSmv5bTokN5xizM9fN_73o5NRilvYYFUzI',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa5628ebfcec';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users\/2?__cf_chl_rt_tk=F9WVdse0A3WFN8LBWA7sEzMPa.1Xc_ERqrcMNxBqrv0-1770300486-1.0.1.1-AOYGEQsecTLPG6rX0KMe3Y2r9d_peFo.v5XKzFV_49Y"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
+          Response:<br><pre></pre>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:23 PM</td>
         <td>
-          Received 403 - API might have access restrictions
+          DELETE non-existent user test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:23 PM</td>
         <td>
           Test passed
         </td>
@@ -685,9 +986,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testUpdateUserWithInvalidData</p>
+            <p class="name">testDeleteUser</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:004</span>
+              <span>10:30:23 PM</span> / <span>00:00:00:820</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -695,10 +996,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testUpdateUserWithInvalidData</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:004</span>
+<h5 class="test-status text-pass">testDeleteUser</h5>
+<span class='badge badge-success'>02.06.2026 10:30:23 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:24 PM</span>
+<span class='badge badge-default'>00:00:00:820</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -712,28 +1013,35 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:23 PM</td>
         <td>
-          Testing PUT update user with invalid data
+          Testing DELETE user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:24 PM</td>
         <td>
-          Connection error: Cannot read field "userId" because "testData" is null
+          Status Code: 204
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:24 PM</td>
         <td>
-          Skipping PUT user with invalid data test due to connection issues
+          Response:<br><pre></pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:24 PM</td>
+        <td>
+          DELETE user test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:24 PM</td>
         <td>
           Test passed
         </td>
@@ -748,9 +1056,9 @@
           tag="users"
           device="">
           <div class="test-detail">
-            <p class="name">testDeleteNonExistentUser</p>
+            <p class="name">testVerifyUserDeleted</p>
             <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:004</span>
+              <span>10:30:24 PM</span> / <span>00:00:01:378</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -758,10 +1066,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testDeleteNonExistentUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:004</span>
+<h5 class="test-status text-pass">testVerifyUserDeleted</h5>
+<span class='badge badge-success'>02.06.2026 10:30:24 PM</span>
+<span class='badge badge-danger'>02.06.2026 10:30:25 PM</span>
+<span class='badge badge-default'>00:00:01:378</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -775,168 +1083,56 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Testing DELETE non-existent user
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Connection error: Cannot read field "userId" because "testData" is null
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Skipping DELETE non-existent user test due to connection issues
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Test passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag="users"
-          device="">
-          <div class="test-detail">
-            <p class="name">testDeleteUser</p>
-            <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:181</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">testDeleteUser</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-default'>00:00:00:181</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">users</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Testing DELETE user
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Status Code: 403
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa57698a0b5f',cH: 'NOFSqPH7I_iHeUVh6nFuqMWf8Z.cEjN.0vvgFyqzqIg-1770300486-1.2.1.1-P8klKtIvnB038m.oWOoW3SiMkYzFnfQAiMy0nB8jxk0mzWOGitS0gWIalZBwgfme',cUPMDTk:"\/api\/users\/2?__cf_chl_tk=_vPFEhgf1MlYjaiGjTB5FGMu90MxLdUt56n7T4D0qn8-1770300486-1.0.1.1-MB_k757i8XfNVrxbSezgjjrcX55fimJOBAptmGqasr8",cFPWv: 'b',cITimeS: '1770300486',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users\/2?__cf_chl_f_tk=_vPFEhgf1MlYjaiGjTB5FGMu90MxLdUt56n7T4D0qn8-1770300486-1.0.1.1-MB_k757i8XfNVrxbSezgjjrcX55fimJOBAptmGqasr8",md: 'FwK3FHhXHVsFqeWqBUi36qL2IEwnaQ6e0je8A2jhWWQ-1770300486-1.2.1.1-_GLyoUCzUoWjByTmY0jytwdDNAT3mkkTJs._ba_rWUvdP__Zi8KPK73xVIe_GMcZ1jfve3VhXx5iuPvhwp6t_6.pO2vTW6nBbB4o2kowOYMwpzL9f0zm3qt0zrApoxnx4II44wX8bmJjEYQDtao3vsZfphrKTOnOCA3jVXVzxDMH0Oxj1GtAZivQMEeeqsW_2LfpkW_yB1J064Uu4YZJorkBl4irIQcNmZlBLPFCZ7JObLOFtHPSFpcTCxbR3p42X67Bz9ZGWNKqPKTaFgtEiGG0ob3RitY.j5iLe_wELk9hlqCD106Q.KKDzVxeBQGIym7Zb45OHAptIoCzbt35mQDjwrbXwYfuPgcIez6xtBsfPwzONv5y6e3AztUSHxsjMZV2oQZF8hBMbD5NDGNL4b.mzLa.OXbmCsbJ2PPvDw6FgGYIZAN6u9FlogKuOzSQhKTsj6.ds8aa7j7NGWjJfnyn360gbEBNXVXUwhwwL_auvzQphaIqjOakWQdwgkkGPEsq6pOsJitWtF9ODAB9.ySqlRLVe0R0MDX9Pea3CBN8qfyo3EYqMe5Bg3XM4adI_lX3xxoUUiGPkZXqbIrKLkRN.S1XVQLEjEe7vLfrbUjQE9arBPV0S1Km5Btzmcdqozryn2GDNrskujHwWIx0UnQYF.pT33I5N2YgJN1wuDxD_PjQqbNAhu5.a8XMrIcKIc6Q7cHqSrrIrcOZO80q2I62Ml3i57Fdwl7mkSovfPUOgox.AzwsD9o9Kp_ld.zG5YYAHqGkoYFySxW67vaV9Yk4ne13xPqj9JyqA16kGsUQTiz7CmzS_3piwiaIi5McY_g3yA.NHPRH3GHUIbfVqyEsbAhzcEzuDnsx3Jw8BJKmbb0K4RnGpSc0dgR_Ff5BOuRUhYepWwDHyiYFGIbQPWtYCvsiulsmrrNkyeorzU7uPUL6Ns9WJtuzImcQSesq',mdrd: 'xvuJJ1Wr3bMsNBLkRnO3o3BIFtKurOutBgLTzN3Wy74-1770300486-1.2.1.1-QYotty0Yq0aAmqf4WG8esugAOrzzyBJ2JPeLK4W74_GE5soWFWKRzs5u6BiiWI1GG9pP3.P4obaMH4.6Aa7vyWZZ05byZM3wf0moswOylO3GQ4J5mBbHe_imz7UQfNQM0O8MZe_SMGmQXb8NibAqGwAwzuH3x.7ODm6CZDpfBXnqKW2ww_wDTxb2QlgknRTwv0.pa_PuyARyzMbGLNPwZ0_drcl7jJv2QK9i8Ny_.M4TfOYIwghXfqT4FvIZFTot7j5IqLu7IlZKeKzA5M0OqqVdW961WJhDTsMRCcKdXj9iuZYBlMs5ua2DVBjLW2OQ8BxUtriqZ59H4QI5jLjplXJOR0iwr9B8icSnNmbQTGiV5hOFeAvq5vW0NxPfDtUKhuczcBiubb_hNdz6175njk5xLVO8qx41INhx0g3W3dt9BubbEk1Tmi7x0a4yOj9Vn5jqxoZGZ_vT2NShWW7Us8GjuoIHHjZAb2hCxpqY.kTeJJd0Q0T2GpHqbseEa4C_ms.LgJYKqzZ0xnNAFklTnWe.JDkaX9rIQFESLcX0vqL8uKb_GllhJeOLLXufhNQqS8_cJbg0Rkf7wcVtuqiGnUi8pJs0pQ7azWQUlO97X9Q9J.WnSTIKD4kD6vX7jGV_wtPEZlBuXwTU4KsJ4kdbKmV2.f6qPNiCDPduXMP.kIc2EzqYT9_06B2h99Sp1_hNNvo9NsVRdnxBH3MPXTm2Aqg40TzyeJBlj_TzjJhpHVos23ZgHSRchUZekT13vsTRSn7fUHpIrShGL_czvZ44nwFXFM47hWpxj0v60SxqI240uRf7hT8DE2eusNC28JOcgdEvAYGacXBWO.v_FxA2xuQTw3S7WPrs4XhHuoHx2FOIA2DdZE6YyhLKYBprqWUPKQ73Hw2t44f7wWpPPelUWKkceXdhuScnsdH_DoO6ABh1qHuKevv.FB2nalc.XK3rRzPZ5uD2hefINwbi7zVlXBvzB3TadQd7_DLLj572oSLXFkBzroTLFhMcEpovBAf7Enc7r6B_9OCZoPhDJurluHvoGRLhAlabGFVUF.YuTmv0H.pVd1_HExp9hFzEHLg38JB5IK2MlsVU2xGRPx6Pk2QenPmf3OF1VIbHJwo_zyj0d8KZ9BgH2j1rKMDTa9uE0sTXaRob.sOnlzgOzIpLdbZM4Uw3HB8iARdglStPNKzzNQp5ncTYByKKtfyPfpxhKrMhoQdGXB1oixwp.On7rnnDQvdyqOpo6.yZmxes..DsAS0Imid1whU2V8PJx_ovQnYSz5LtQmCltEMIydMLhRLbpKyV8FNtEKzhazVgedmj1fm5CA_VZ5cg.cNIlqbNoaVFAP618LsXE0EvmOPL_ieru6drGtLcHRsw.f8wjnksKpl8RFdSevQN2s59RPNjFVa1cB4nujxgVWr.BZVisD9UzbizgLxtpEdIzPukfc9E85KubpKQuOaN9xyE.ExdIPREjXJwh9gVlJYPdYnwcAccfXhq02YOnkUo.haerBlFVfc_H9AvnKZe79XMuWkQau8T4gL3LzEipsBA9rPATwQGcBM1Kza5YMghFA1GDF3RGGqtSxA2T1FWinHJpPCPfn6zdgbo.QdQVuxYfT.mtQmx3fZBwtVgK9Fdd0.l3864hp1Xyf8bH7UkpYyKuLkG83W_WWsAev9KynTsiiP2BGQD6btz1Mo7LLibXmjSsIge5jlHlnEzmBMxBVdY8WUdMvqTQgGG1_q61u.e5lcstMfCbRRJSmyg3cs0EfD.QHZFbJd7qRIMqeEb2mKXw.wFjFk5m0dEumbxjPN0e8sMiVdZhXVJ7hGs4ojBjU1T7kGnpBPLS2KYw5I_dY6DHF3qyXaVa5228SjzFLx.WoPV._6yHHysPGeJCldFel9m2HlYof9OuCaO5SaL.2007836tuEPDV..CqC5izYdK_kY3l1zbqsaPqrQHS9MtpfE079IV5j2VzOqfIb16LdnjLA18O8kenQJwpoM0FMzXHW6dvfplqxkQY8arbNICoDJ7FEDgOSbc5O4tPqD4ZQeDn9xSGIOnFrWE9h3E2i8eE14WuUvinHfDh82m_UYsKgUQ6LCkFAeE_.fvCD..rkwq7fXOD375RR5QpxIoOpOi6OFuFOpJmzbTncf.Hs5W68P6WOEtzNDajOZwOAMMe2Be6CiUDp7PJQ.Sw8w8Ou_sOmeE3t7USQ2kQUz9NI1MbvI3GsZE.q7V4BE_jE933nPrDBqSXeJggtAnT5hsYR50z_NzUoUMKTjitMJ1XN.1kMholATt7ioXJSsJX57pfgsxRkVczCzj6lAvfFjo884iS6gvYK7YiGBgIcUiHuuUHMglOIbj.EGFUl0EjKSRpb8nf49C.KVxmJM3ce9P1ViALRTnXvgYiPdskHzaghGEVwlyRWKAOQiHhCvtXPUsCoPvsSHL_5xcFaQQg2wqsmE7IYZZcsMy4wcZo39AFJh19sQbri16qHOkfolwjWtJy6geLEtv3zEf556JcD036lM80OHxpa9Oqva_.rC__paJtV5aQw',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa57698a0b5f';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users\/2?__cf_chl_rt_tk=_vPFEhgf1MlYjaiGjTB5FGMu90MxLdUt56n7T4D0qn8-1770300486-1.0.1.1-MB_k757i8XfNVrxbSezgjjrcX55fimJOBAptmGqasr8"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Received 403 - API might have access restrictions
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:05 PM</td>
-        <td>
-          Test passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag="users"
-          device="">
-          <div class="test-detail">
-            <p class="name">testVerifyUserDeleted</p>
-            <p class="text-sm">
-              <span>11:08:05 PM</span> / <span>00:00:00:151</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">testVerifyUserDeleted</h5>
-<span class='badge badge-success'>02.05.2026 11:08:05 PM</span>
-<span class='badge badge-danger'>02.05.2026 11:08:06 PM</span>
-<span class='badge badge-default'>00:00:00:151</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">users</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:05 PM</td>
+        <td>10:30:24 PM</td>
         <td>
           Testing DELETE user and verify deletion
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:06 PM</td>
+        <td>10:30:25 PM</td>
         <td>
-          Status Code: 403
+          Status Code: 204
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:06 PM</td>
+        <td>10:30:25 PM</td>
         <td>
-          Response:<br><pre><!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{line-height:2.25rem;font-size:1.5rem;font-weight:500}@media (width <= 720px){.h2{line-height:1.5rem;font-size:1.25rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}@media (prefers-color-scheme: dark){body{background-color:#222;color:#d9d9d9}}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9c92fa58ae2cce7a',cH: 'kXEkGHi7krhjwbVK570YdVmYgWB9ga3fn3PTWoYuWsk-1770300486-1.2.1.1-jWvj3mT.xMlxHi5Cqo2j2A0sVDwyYBp4hbh2CEDmkAXKZpoHWI8ip5y6M3nbBGMV',cUPMDTk:"\/api\/users\/2?__cf_chl_tk=z5JXcEMmEtCBXNTEa0KHOB2RgUpEMdkjldLs3rLP6Pw-1770300486-1.0.1.1-eTJiWlrgHo3hJSYY_e18WxmKTK69K100I_tRavUuMg0",cFPWv: 'b',cITimeS: '1770300486',cTplC:0,cTplV:5,cTplB: '0',fa:"\/api\/users\/2?__cf_chl_f_tk=z5JXcEMmEtCBXNTEa0KHOB2RgUpEMdkjldLs3rLP6Pw-1770300486-1.0.1.1-eTJiWlrgHo3hJSYY_e18WxmKTK69K100I_tRavUuMg0",md: 'zCrZY7GyVQLK9uPrphu0.8KOA31GvI7dRf0SqI3ipVs-1770300486-1.2.1.1-TETj7S53FNrc3DASoDnX7DWrOf6TCqeuluL3iz6hp15oyqOFQujpZrnP4YVWGzPMRARm1WNDtu_Y90Yi0WZYhcNXxc.XA76vqgZx8fMaK5IjFpY4lY.9t1NjFZWbE1eAGR2ga.tSHKMSaXLIyq7oa.8Qcjcbwtr.5vw8HudwqjWBptzE3WkNzzU0Xh7tL8xhg3.NtOR8Tjed1VU3yUIXEAwCmNs_PwdXkzEKI6dpdp2CM_1VH8hRuDF9_CiW.t9OGeIhmKM38lEQZVPXY_QsDgrxSrlhiAH4H5nYqWjLQiAnAoNN.LGm1F2FYcMXiguxLZa8Du8G9COv_B_QrLbwBqEH.5i088LIpllCpUyc39QcwV.QCjfM8o_lTdmC1nVlPNRloxlrVIldBDFFgQ1Uefa6hjw5_CMvJFWWYigkXhKG0kP5rjSL8UmWZ4myW05_1zd95o3iTcZ1xpR7gGeCIKAVZc.sn3knjpbYqKRtWza9N3BOx21wouSBmSeIpX13qWeuRk1Fxd066EMUhS1tpNVPQ7o6A_LV1_sRYG7r8UqaNB3qHn_EN2Gc9txj.RXi28wL_MB9vj_Ej1Aw4IYJozcnwg3UIkEP8ejsyItyEvIe7OkIp513q2_HHcjwHN_.xlFJ.ZGjsIoCMw2R2En_6Gf.BlF7fA_ssZ_H2IalyhuSRKGqSL2a3Si2_vig1Sl6Jj8IgbQYNU42D3dopiqrpcSvIFzT8FA.WBZfnGToiW5tA6N.iYX9i0fTsi4Ds58Z2lSiUaiev4YHTCBhCL9VDzq.PrmQkZJ63ktDrYCyg0hw5m32baKDPT6cBpfJTMLs7bnoE2s0V9oRU4EfeSr6LWGH56zHWNKTjTdXaKICvJaM.SVM8LtiVamug75YKnT9ScdDj60m_VIxppHZI2nbarNZADS5aCAkTcn42GeGrsE3HAuccnuKor2YGR5fdSHG',mdrd: 'tMhGL57eL18MIVw_4RoQ.uRCMYJeYMSsRxm36hkuHZA-1770300486-1.2.1.1-wIeOPzJ3SPlcxOd0_r3AHsePlh9ipQDY90r5VK9FrVtNJ_Cbh_CAtPcKOXDDh.1cn_Kq_Kh90p1zJwrRDOA0nH4xe6xyJ6uFFaGJSoUDq856sn2UBS9xTAWc4xDNCp0fq.ZpN_tewQoBWMvA1xQ8ygu537a9nKoLR_ziKazkBhf4eN380cJi2BlrCJ4pUBBdAqTxwsraIz1bT4viw67EXOWmhPUZIh6QxzAbY_5xeM8QCAy18RleRFoqh.bAWEFAozbLE0nZG.Yys3z9rrwpz4hiMc_r.rUOYvtYRfvi3YC8lnJ6yvw0zH6pGS0rULV.R4khEvW1bzc.tEHRDU9PSg1mzXWSeo0VklFv3E46Z4_K0tzgN3R0tgycH2QLPnajG5y.kBdfFKjHrg3_ErxlJr84qn4iQnG_U5GQL6Jh6JUDFWWvf63I7YecPr70WV9sUxNnEiOMYotMTNWS7yNLnRGeUUOnJ3z7t57J7ZfHVACQcADzHXtS6KoJSNTLtTMFYBbRukOhuCDK.ptLneZ40Lkr4JoZq6hH0..47Uuh_PemcG.zlfjEzG6r15yvrCdk2YvJhg0f3v6ftCaKXDdK3IQiFp4YR0AaBhdvInxtJqvahzh9WOL.vMG8ec9Ir7pjZiCcyf5Bud7eW07xUUeQz_leMR.IgrnvmczV2wFKrLVUYT1K9340WMbUd01Cun9ibzFhVxKRC5WGIQ4PPWgR1ZDFjEmdXInuhk1JAvX9etNDjPC57WGylPXvSkNccytYDXm7O29VrV3tFxz1rt6_V4nNIrXVU_oI0m22GTrnobXXKzQZIr__q.0p4kd4IAOS_PKpq_bDqUU0IPyyrtt43_Ehh.WrT2IS.N58vrekFClGaN0dXdSUHFbYx2mA7hsCkjwWm6eXjYgfle0N3M8EsN7nd3JUDjxwyr15k1bzKJS3NtMinCGZy6aiJACcLXsEQr4EojO7GVNT6RyHij351hkbYCzXmOh8sExmdxpYP1oyrd.fcJyy3A7Zu_yWkGCPlfRq6dL7NNxL4Vp7sYyDvCx.BR8BjVUkvR3WW9ep9x5LkpAaiySaRPXSuh7i2JiQPsi88_Me7L_c_3rg_bCGveYLbx9M5C2REPsn.IXVsOacxGwTNfh1qScnS4AciY5UCqYH7frbMn4H.BR4E240JZgV5o81TVLKb7GQ9o2YK8e8a4ryH9ybuLDyfjaYYlJ3GvcWeDbTOx8nm1WFQtDqUdbjiHEO6TV_gjEmbah6LKr2p7bSfZ7_a2aHUQCs2AzqH4eG7rpqB88AEV.WRfgFDiL6DPAOVaP8Up9OwPRxEGPUoKZiZLIvjF.cMK7xPcMu4J3d2J7PvUIpTPcaWGw8EawvnFCt3XoX50AlkXb5CJXZubbHDOO2UIDouJDOyxTimiveAGzS_lF0p5bMomh7fTBY7zLaL_d3sIEcUXcjt2qaoAUWxGGemqVpam3lu4mWsJp8W4ueDMoZ_wvoEdZIIg.EfA9WjCzxEM6hdfbyT4Ma7jwo8_iWcJZ0I2SC0_oZIWF7gSZ6AdcmNvbanVFdEZRYjzQiIhrI6hBqmTbOq1rIOJfyl1qWL1copXQNjq5volnWkiBGYW_I5c6B3yOIq0eQLe4bqdL80oQCUU34OXylVPGupe.TnGj_zMG28RSS2widZRjxCVluQ1TNkKAvuEhDLVeYsK9D8kXQLURZqPJBqvjXJZOaQhMGGIUNUrJNQcGMJUbngGjsgrbGP_G7KRUS5oGbDY8EiBNNAED5lniUSsxpbVzH2oa7uNMj78dJa3U_q13e.6DyJM0dwlSpgdVd.AwVauFDQ9vUX4c88YNnMCuOOk94ThvaGDdylgBLWAOuIzsMx_I4DIf3OC4twPaneZIKIK.F.k6KOUb9OcCpjpCgFySXeSoxh.fLzJFQtoRSqtSfPuQnzxUDzphYOZ0ehgDye7GSg4ufe4HQOBgi2BknDbY1_xyERLIooKNVdNxylexlm8T1FrVXNBzmENm8dSdsf1q3VVdOq0AH4AWgegFEiE42PyovDVllIFy6juAfM6K2H0w9VEvT0E4bQRnx94l0wOaOXHRhaHS5hAdd9NZM7BWXcw0XRGC5CAQBqlNuWZgEHGiAYb8naOjQxb8iby._kElLDu.OMGVCGT.Qk80aUioGmCQ2XY9tbeQheSIJGweuVTSUrWODrjArDRi.ioau6A3NuOrv30bNOOrh9HABQ1jkOcN8Lh5URYBzBIDQrjE_fxYDKNUCPdiIsaimuodvf8Jj8dXDT_PgYC10_yf7SDb0VwtuEeaMA8Wo.eaP8d2BvHzFx.qsMpobAbQRGO.TrWlJYIU2fam6rbDfwAyw86C4AWR3mK_wlww_Rqt.h1K6gNRZHRAFXoFZ11SdU_mOA.dKNH91x7KBwxp1AL6cug1.o.DIknipJECNF1rYo4hni5cySZzhr2uX1X.18ekjF_2stpKr00p3FQt1LnH3QG1ejaIQZAwMqS8lFewUQcDVFvMX6wH09agTuFaSL1QqQbXXqFODaNY8SKJfBgHT0VyqaogDCahO3aWK',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9c92fa58ae2cce7a';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/users\/2?__cf_chl_rt_tk=z5JXcEMmEtCBXNTEa0KHOB2RgUpEMdkjldLs3rLP6Pw-1770300486-1.0.1.1-eTJiWlrgHo3hJSYY_e18WxmKTK69K100I_tRavUuMg0"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html></pre>
+          Response:<br><pre></pre>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:08:06 PM</td>
+        <td>10:30:25 PM</td>
         <td>
-          Received 403 - API might have access restrictions
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:25 PM</td>
+        <td>
+          Response:<br><pre>{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:25 PM</td>
+        <td>
+          DELETE returned 204 - this is expected for ReqRes.in mock API
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:30:25 PM</td>
+        <td>
+          DELETE user verification test passed successfully
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:08:06 PM</td>
+        <td>10:30:25 PM</td>
         <td>
           Test passed
         </td>
@@ -955,18 +1151,82 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view exception-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>11</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>testCreateUserWithInvalidEmail</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>testGetUsers</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>testUpdateNonExistentUser</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+<span class='badge log badge-danger'>3</span>
 </span>
 <p class="name">users</p>
 <p class="duration text-sm">11 tests</p>
@@ -974,7 +1234,8 @@
 <div class="test-contents d-none">
 <div class="info">
 <h4>users</h4>
-<span status="pass" class='badge log pass-bg'>11 passed</span>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -987,119 +1248,79 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:01 PM</td>
+<td>22:30:09 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>testCreateUser</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:04 PM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:15 PM</td>
 <td>
-<a href="#" class="linked" test-id='2' id='2'>testCreateUserWithEmptyData</a>
+<a href="#" class="linked" test-id='2' id='2'>testCreateUserWithInvalidEmail</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:04 PM</td>
+<td>22:30:16 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='3'>testCreateUserWithInvalidEmail</a>
+<a href="#" class="linked" test-id='3' id='3'>testGetNonExistentUser</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>testGetUsers</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:17 PM</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>testGetNonExistentUser</a>
+<a href="#" class="linked" test-id='5' id='5'>testGetNonExistentResource</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:18 PM</td>
 <td>
-<a href="#" class="linked" test-id='5' id='5'>testGetUsers</a>
+<a href="#" class="linked" test-id='6' id='6'>testGetResourceById</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:30:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>testUpdateNonExistentUser</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:21 PM</td>
 <td>
-<a href="#" class="linked" test-id='8' id='8'>testUpdateNonExistentUser</a>
+<a href="#" class="linked" test-id='8' id='8'>testUpdateUser</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:22 PM</td>
 <td>
-<a href="#" class="linked" test-id='9' id='9'>testUpdateUser</a>
+<a href="#" class="linked" test-id='9' id='9'>testDeleteNonExistentUser</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:23 PM</td>
 <td>
-<a href="#" class="linked" test-id='10' id='10'>testUpdateUserWithInvalidData</a>
+<a href="#" class="linked" test-id='10' id='10'>testDeleteUser</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
+<td>22:30:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='11' id='11'>testDeleteNonExistentUser</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='12' id='12'>testDeleteUser</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='13' id='13'>testVerifyUserDeleted</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>2</span>
-</span>
-<p class="name">resources</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>resources</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='6' id='6'>testGetNonExistentResource</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>23:08:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='7' id='7'>testGetResourceById</a>
+<a href="#" class="linked" test-id='11' id='11'>testVerifyUserDeleted</a>
 </td>
 </tr>
 </tbody>
@@ -1119,25 +1340,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Thursday, February 05, 2026, 11:08 PM (JST)</h3>
+<h3>Friday, February 06, 2026, 10:30 PM (JST)</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Thursday, February 05, 2026, 11:08 PM (JST)</h3>
+<h3>Friday, February 06, 2026, 10:30 PM (JST)</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>13</h3>
+<h3>8</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>3</h3>
 </div></div>
 </div>
 </div>
@@ -1153,12 +1374,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>13</b> tests passed
+<div><small data-tooltip='72%'>
+<b>8</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='27%'><b>3</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1176,10 +1397,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='22%'><b>13</b> events passed</small></div>
+<div><small data-tooltip='13%'><b>8</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>45</b> others
+<small data-tooltip='5%'><b>3</b> events failed,
+<b data-tooltip='%'>48</b> others
 </small>
 </div>
 </div>
@@ -1195,7 +1416,7 @@
 </div></div>
 <script>
 var timeline = {
-"testCreateUser":3.333,"testCreateUserWithEmptyData":0.012,"testCreateUserWithInvalidEmail":0.239,"testGetNonExistentUser":0.033,"testGetUsers":0.058,"testGetNonExistentResource":0,"testGetResourceById":0.205,"testUpdateNonExistentUser":0.013,"testUpdateUser":0.188,"testUpdateUserWithInvalidData":0.004,"testDeleteNonExistentUser":0.004,"testDeleteUser":0.181,"testVerifyUserDeleted":0.151
+"testCreateUser":6.04,"testCreateUserWithInvalidEmail":1.105,"testGetNonExistentUser":0.766,"testGetUsers":0.036,"testGetNonExistentResource":0.688,"testGetResourceById":2.936,"testUpdateNonExistentUser":0.565,"testUpdateUser":0.86,"testDeleteNonExistentUser":0.885,"testDeleteUser":0.82,"testVerifyUserDeleted":1.378
 };
 </script>
 <div class="row">
@@ -1206,19 +1427,11 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>users</td>
-<td>11</td>
+<td>8</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>resources</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>72.727%</td>
 </tr>
 </tbody>
 </table></div>
@@ -1251,8 +1464,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 13,
-failParent: 0,
+passParent: 8,
+failParent: 3,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1268,11 +1481,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 13,
-failEvents: 0,
+passEvents: 8,
+failEvents: 3,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 45
+infoEvents: 48
 };
 </script>        </div>
       </div>

@@ -3,9 +3,6 @@ package pages;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import models.UsersResponse;
-import models.ErrorResponse;
-import models.UserUpdate;
 import utils.JsonUtils;
 
 import static io.restassured.RestAssured.given;
@@ -16,7 +13,7 @@ public class UsersPage {
     private static final String USERS_ENDPOINT = "/users";
 
     public UsersPage() {
-        request = given();
+        request = RestAssured.given();
     }
 
     public UsersPage setQueryParam(String param, Object value) {
@@ -26,11 +23,6 @@ public class UsersPage {
 
     public Response getUsers() {
         return request.get(USERS_ENDPOINT);
-    }
-
-    public UsersResponse getUsersAsObject() {
-        Response response = getUsers();
-        return response.as(UsersResponse.class);
     }
 
     public Response getUsersWithPage(int page) {
@@ -48,14 +40,13 @@ public class UsersPage {
     }
 
     public Response getUserById(String userId) {
-        return given().get(USERS_ENDPOINT + "/" + userId);
+        return RestAssured.given().get(USERS_ENDPOINT + "/" + userId);
     }
 
     public Response createUser(String name, String email) {
         String requestBody = String.format("{\"name\": \"%s\", \"email\": \"%s\"}", name, email);
         
-        Response response = given()
-                .contentType(JSON)
+        Response response = RestAssured.given()
                 .body(requestBody)
                 .post(USERS_ENDPOINT);
         
@@ -72,8 +63,7 @@ public class UsersPage {
     public Response updateUser(String userId, String name, String email) {
         String requestBody = String.format("{\"name\": \"%s\", \"email\": \"%s\"}", name, email);
         
-        Response response = given()
-                .contentType(JSON)
+        Response response = RestAssured.given()
                 .body(requestBody)
                 .put(USERS_ENDPOINT + "/" + userId);
         
@@ -81,13 +71,8 @@ public class UsersPage {
         return response;
     }
 
-    public UserUpdate updateUserAsObject(String userId, String name, String email) {
-        Response response = updateUser(userId, name, email);
-        return response.as(UserUpdate.class);
-    }
-
     public Response deleteUser(String userId) {
-        Response response = given()
+        Response response = RestAssured.given()
                 .delete(USERS_ENDPOINT + "/" + userId);
         
         logInfo("Deleted user with ID: " + userId);
@@ -98,12 +83,8 @@ public class UsersPage {
         return JsonUtils.getLastCreatedUserId();
     }
 
-    public ErrorResponse getErrorResponse(Response response) {
-        return response.as(ErrorResponse.class);
-    }
-
     public void resetRequest() {
-        request = given();
+        request = RestAssured.given();
     }
 
     private void logInfo(String message) {

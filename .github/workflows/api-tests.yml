@@ -37,7 +37,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Run API Tests
-      run: ./gradlew test
+      run: ./gradlew test -DbaseURI=${{ secrets.API_BASE_URL }} -DapiKey=${{ secrets.API_KEY }}
       
     - name: Generate Test Report
       run: ./gradlew jacocoTestReport
@@ -59,6 +59,7 @@ jobs:
         file: ./build/reports/jacoco/test/jacocoTestReport.xml
         flags: unittests
         name: codecov-umbrella
+        token: ${{ secrets.CODECOV_TOKEN }}
         
     - name: Comment PR with Test Results
       if: github.event_name == 'pull_request'
@@ -77,6 +78,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `## 🧪 API Test Results\n\n${summary}\n\n📊 [View Detailed Report](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.run_id }})\n\n📥 [Download ExtentReports](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.run_id }})`
+              body: `## 🧪 API Test Results\n\n${summary}\n\n📊 [View Detailed Report](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.run_id }})\n\n📥 [Download ExtentReports](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.run_id }}?check_suite_focus=true#artifacts)`
             });
           }

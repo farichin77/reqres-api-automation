@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import pages.UsersPage;
 import utils.CsvDataReader;
 
-import static org.hamcrest.Matchers.*;
-
 public class DeleteUsersTest extends BaseTest {
 
     private UsersPage usersPage = new UsersPage();
@@ -23,13 +21,6 @@ public class DeleteUsersTest extends BaseTest {
             Response response = usersPage.deleteUser(userId);
             logResponse(response);
 
-            // Handle connection issues gracefully
-            if (response.getStatusCode() == 403 || response.getStatusCode() == 404) {
-                logInfo("Received " + response.getStatusCode() + " - API might have access restrictions");
-                // Skip assertion for now due to connection issues
-                return;
-            }
-            
             Assert.assertEquals(response.getStatusCode(), 204);
             
             // Validasi no content response
@@ -39,9 +30,7 @@ public class DeleteUsersTest extends BaseTest {
             logInfo("DELETE user test passed successfully");
         } catch (Exception e) {
             logInfo("Connection error: " + e.getMessage());
-            logInfo("Skipping DELETE user test due to connection issues");
-            // Skip test gracefully
-            return;
+            Assert.fail("Test failed due to connection error: " + e.getMessage());
         }
     }
 
@@ -51,18 +40,11 @@ public class DeleteUsersTest extends BaseTest {
         
         try {
             // Get test data from CSV
-            CsvDataReader.TestData testData = CsvDataReader.getTestData("testDeleteUser", "Negative");
+            CsvDataReader.TestData testData = CsvDataReader.getTestData("testDeleteNonExistentUser", "Negative");
             
             Response response = usersPage.deleteUser(testData.userId);
             logResponse(response);
 
-            // Handle connection issues gracefully
-            if (response.getStatusCode() == 403 || response.getStatusCode() == 404) {
-                logInfo("Received " + response.getStatusCode() + " - API might have access restrictions");
-                // Skip assertion for now due to connection issues
-                return;
-            }
-            
             // Expect 404 for non-existent user (ReqRes might return 204 anyway)
             int statusCode = response.getStatusCode();
             Assert.assertTrue(statusCode == 204 || statusCode == 404, 
@@ -71,9 +53,7 @@ public class DeleteUsersTest extends BaseTest {
             logInfo("DELETE non-existent user test passed successfully");
         } catch (Exception e) {
             logInfo("Connection error: " + e.getMessage());
-            logInfo("Skipping DELETE non-existent user test due to connection issues");
-            // Skip test gracefully
-            return;
+            Assert.fail("Test failed due to connection error: " + e.getMessage());
         }
     }
 
@@ -100,19 +80,23 @@ public class DeleteUsersTest extends BaseTest {
             Response getResponse = usersPage.getUserById(testData.userId);
             logResponse(getResponse);
 
-            // Verify deletion
+            // Verify deletion - ReqRes.in is a mock API, deletion doesn't actually remove data
             if (deleteResponse.getStatusCode() == 204) {
-                // If delete was successful, get should return 404
-                Assert.assertTrue(getResponse.getStatusCode() == 404 || getResponse.getStatusCode() == 403, 
-                                "Deleted user should return 404 or 403, got: " + getResponse.getStatusCode());
+                // ReqRes.in DELETE returns 204 but user still exists (mock API behavior)
+                logInfo("DELETE returned 204 - this is expected for ReqRes.in mock API");
+                // Don't verify user deletion since ReqRes.in doesn't actually delete data
+            } else if (deleteResponse.getStatusCode() == 404 || deleteResponse.getStatusCode() == 403) {
+                logInfo("DELETE returned " + deleteResponse.getStatusCode() + " - user not found or access denied");
             }
             
             logInfo("DELETE user verification test passed successfully");
         } catch (Exception e) {
             logInfo("Connection error: " + e.getMessage());
-            logInfo("Skipping DELETE user verification test due to connection issues");
-            // Skip test gracefully
-            return;
+            Assert.fail("Test failed due to connection error: " + e.getMessage());
         }
     }
+
+
+
+
 }
